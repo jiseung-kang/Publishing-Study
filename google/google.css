@@ -18,6 +18,7 @@ li {
 a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
 }
 
 button,
@@ -51,7 +52,7 @@ body {
 .wrap-nav .lst-nav {
   display: block;
   position: relative;
-  padding-left: 21px;
+  margin-left: 21px;
   font-size: 15px;
   color: rgb(33, 33, 33);
 }
@@ -63,10 +64,22 @@ body {
   border-radius: 100%;
 }
 
-.hover-line:hover {
+.lst-nav:nth-child(3),
+.lst-nav:nth-child(4) {
+  padding: 5px;
+  border-radius: 100%;
+  box-sizing: content-box;
+}
+
+.lst-nav:nth-child(-n+2):hover {
   text-decoration-line: underline;
   font-weight: 500;
 }
+
+.lst-nav:nth-last-child(-n+2):hover {
+  background-color: rgb(188, 188, 188);
+}
+
 
 .tit-logo {
   display: block;
@@ -162,9 +175,10 @@ body {
 .lst-short:last-child::after {
   display: block;
   position: relative;
-  content: '➕';
+  content: '+';
   top: 10px;
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: 400;
   z-index: 999;
 }
 
@@ -173,28 +187,17 @@ body {
   top: 12px;
 }
 
-.lst-short:hover:after {
+.lst-short:nth-child(-n+7):hover:after {
   display: block;
   position: absolute;
-  content: '➕';
+  content: ':';
   right: 3px;
   top: 3px;
   font-size: 20px;
-  transition: .5s;
-  transform: scale(1);
-}
-
-.lst-short:hover:after::before {
-  content: '➕';
-  display: block;
-  position: absolute;
-  color: pink;
-  right: 3px;
-  top: 3px;
 }
 
 .lst-short a {
-  display: block;
+  display: inline-block;
   position: absolute;
   width: 90px;
   left: calc(50% - 45px);
@@ -205,8 +208,8 @@ body {
 footer {
   display: block;
   position: fixed;
-  bottom: 12px;
-  right: 12px;
+  bottom: 15px;
+  right: 15px;
 }
 
 .btn-custom {
@@ -214,16 +217,14 @@ footer {
   position: relative;
   font-size: 14px;
   font-weight: 500;
-  padding: 5px 18px;
+  padding: 5px 20px;
   color: rgb(56, 113, 224);
-  right: 0px;
   border: 1px solid lightgray;
   box-shadow: 0px 1px 1px .5px rgb(188, 188, 188);
   border-radius: 30px;
+  cursor: pointer;
 }
 
-@media screen and (min-width:700px) {
-  .input-search {
-    width: 300px;
-  }
+.btn-custom:hover {
+  background-color: rgb(248, 250, 254);
 }

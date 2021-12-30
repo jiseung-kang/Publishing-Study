@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google</title>
+  <title>New Tab</title>
   <link rel="stylesheet" href="google.css">
 </head>
 
@@ -14,34 +14,41 @@
     <header>
       <nav>
         <ul class="wrap-nav">
-          <li class="lst-nav hover-line"><a href="">Gmail</a></li>
-          <li class="lst-nav hover-line"><a href="">Images</a></li>
-          <li class="lst-nav"><a href="">➕</a></li>
-          <li class="lst-nav"><a href=""><img src="./images/profile.png" alt="profile" class="img-profile"></a></li>
+          <li class="lst-nav"><a href="https://mail.google.com/">Gmail</a></li>
+          <li class="lst-nav"><a href="https://www.google.co.kr/imghp?hl/">Images</a></li>
+          <li class="lst-nav"><a href="#">➕</a></li>
+          <li class="lst-nav"><a href="#"><img src="./images/profile.png" alt="profile" class="img-profile"></a></li>
         </ul>
       </nav>
       <h1 class="a11y-blind">Google</h1>
-      <img src="images/google-logo.png" alt="Google" class="tit-logo">
+      <img src="images/google-logo.png" alt="Google logo" class="tit-logo">
     </header>
     <article class="engine-search">
       <h2 class="a11y-blind">Search form</h2>
-      <form class="form-search">
+      <form action="http://www.google.com/search" method="GET" class="form-search">
         <label for="search"></label>
-        <input type="text" id="search" class="inp-search" placeholder="Search Google or type a URL">
-        <button class="btn-voice">🎙</button>
+        <input type="text" name="q" id="search" class="inp-search" placeholder="Search Google or type a URL">
+        <button type="button" class="btn-voice">🎙</button>
       </form>
     </article>
     <article class="shortcut">
       <h2 class="a11y-blind">Shortcut</h2>
       <ul class="wrap-short">
-        <li class="lst-short"><img src="./images/naver-logo.png" alt=""><a href="">NAVER</a></li>
-        <li class="lst-short"><img src="./images/github-logo.png" alt=""><a href="">jiseung</a></li>
-        <li class="lst-short"><img src="./images/programmers-logo.png" alt=""><a href="">프로그래머스</a></li>
-        <li class="lst-short"><img src="./images/notion-logo.png" alt=""><a href="">프론트엔드</a></li>
-        <li class="lst-short"><img src="./images/velog-logo.png" alt=""><a href="">velog</a></li>
-        <li class="lst-short"><img src="./images/baekjoon-logo.png" alt=""><a href="">Baekjoon</a></li>
-        <li class="lst-short"><img src="./images/mdn-logo.png" alt=""><a href="">MDN</a></li>
-        <li class="lst-short"><a href="">Add shortcut</a></li>
+        <li class="lst-short"><img src="./images/naver-logo.png" alt="naver logo"><a
+            href="https://www.naver.com/">NAVER</a></li>
+        <li class="lst-short"><img src="./images/github-logo.png" alt="github logo"><a
+            href="https://github.com/jiseung-kang">jiseung</a></li>
+        <li class="lst-short"><img src="./images/programmers-logo.png" alt="programmers logo"><a
+            href="https://programmers.co.kr/">프로그래머스</a></li>
+        <li class="lst-short"><img src="./images/notion-logo.png" alt="notion logo"><a
+            href="https://paullabworkspace.notion.site/b9339b9725ad460394ee092617aef176">프론트엔드</a></li>
+        <li class="lst-short"><img src="./images/velog-logo.png" alt="velog logo"><a
+            href="https://velog.io/@jiseung">velog</a></li>
+        <li class="lst-short"><img src="./images/baekjoon-logo.png" alt="baekjoon logo"><a
+            href="https://www.acmicpc.net/">Baekjoon</a></li>
+        <li class="lst-short"><img src="./images/mdn-logo.png" alt="mdn logo"><a
+            href="https://developer.mozilla.org/ko/">MDN</a></li>
+        <li class="lst-short"><a href="#">Add shortcut</a></li>
       </ul>
     </article>
     <footer>
