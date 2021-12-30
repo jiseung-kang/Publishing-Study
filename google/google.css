@@ -16,6 +16,7 @@ li {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: inherit;
   display: inline-block;
@@ -29,16 +30,25 @@ input {
   padding: 0;
 }
 
+img {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+  background-image: url(./images/background.jpg);
 }
 
 /* Google */
 #app {
+  display: block;
+  position: relative;
   padding: 15px;
+  color: white;
 }
 
 .wrap-nav {
@@ -46,15 +56,25 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 32px;
+  height: min-content;
 }
 
-.wrap-nav .lst-nav {
-  display: block;
+.lst-nav {
+  display: flex;
+  align-items: center;
   position: relative;
   margin-left: 21px;
-  font-size: 15px;
-  color: rgb(33, 33, 33);
+  font-size: 14px;
+  /* color: rgb(33, 33, 33); */
+}
+
+.lst-nav:nth-child(3) {
+  top: 2px;
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+  line-height: 30px;
+  text-align: center;
 }
 
 .img-profile {
@@ -64,20 +84,26 @@ body {
   border-radius: 100%;
 }
 
-.lst-nav:nth-child(3),
-.lst-nav:nth-child(4) {
-  padding: 5px;
-  border-radius: 100%;
-  box-sizing: content-box;
-}
-
 .lst-nav:nth-child(-n+2):hover {
   text-decoration-line: underline;
   font-weight: 500;
 }
 
+.lst-nav:last-child a {
+  display: flex;
+  align-items: center;
+}
+
+.lst-nav:nth-last-child(-n+2) {
+  display: block;
+  position: relative;
+  border-radius: 100%;
+}
+
 .lst-nav:nth-last-child(-n+2):hover {
-  background-color: rgb(188, 188, 188);
+  box-shadow: 0px 0px 1px 3px rgb(232, 232, 233);
+  background: rgb(232, 232, 233);
+  color: black;
 }
 
 
@@ -106,6 +132,8 @@ body {
   display: block;
   position: relative;
   content: '🔍';
+  color: black;
+  z-index: 1;
   font-size: inherit;
   left: 40px;
 }
@@ -113,11 +141,13 @@ body {
 .inp-search {
   display: block;
   position: relative;
-  padding: 14px 50px;
-  width: 500px;
+  background: white;
+  padding: 13px 50px;
+  width: 450px;
   border-radius: 30px;
   border: 1px solid lightgray;
-  box-shadow: 1px 2px 4px 2px rgb(236, 236, 236);
+  /* box-shadow: 1px 2px 4px 2px rgb(236, 236, 236); */
+  box-shadow: 1px 2px 4px 2px black;
   font-weight: 500;
 }
 
@@ -155,8 +185,8 @@ body {
 .lst-short:hover {
   display: block;
   position: relative;
-  z-index: 1;
-  background-color: rgb(232, 232, 233);
+  /* background-color: rgb(232, 232, 233); */
+  background-color: hsla(3, 41%, 10%, 0.849);
   border-radius: 5px;
 }
 
@@ -176,6 +206,7 @@ body {
   display: block;
   position: relative;
   content: '+';
+  color: black;
   top: 10px;
   font-size: 28px;
   font-weight: 400;
@@ -215,16 +246,23 @@ footer {
 .btn-custom {
   display: block;
   position: relative;
+  background: white;
   font-size: 14px;
   font-weight: 500;
   padding: 5px 20px;
   color: rgb(56, 113, 224);
   border: 1px solid lightgray;
-  box-shadow: 0px 1px 1px .5px rgb(188, 188, 188);
+  /* box-shadow: 0px 1px 1px .5px rgb(188, 188, 188); */
+  box-shadow: 1px 2px 4px 2px black;
+
   border-radius: 30px;
   cursor: pointer;
 }
 
 .btn-custom:hover {
-  background-color: rgb(248, 250, 254);
+  /* background-color: rgb(248, 250, 254); */
+  background-color: rgba(161, 89, 121);
+  box-shadow: 1px 2px 3px 1px white;
+
+  color: skyblue
 }
