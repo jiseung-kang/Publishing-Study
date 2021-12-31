@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NAVER 정보입력</title>
+</head>
+
+<body>
+  <h1>NAVER</h1>
+  <img src="#" alt="NAVER logo">
+  <main>
+    <h2>회원가입 양식</h2>
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>아이디 및 비밀번호</legend>
+        <label for="firstname">Name</label>
+        <input type="text" id="firstname" required>
+        <label for="lastname"></label>
+        <input type="text" id="lastname" required>
+        <label for="year">DOB</label>
+        <input type="number" id="year" required>
+        <label for="month"></label>
+        <select name="month" id="month" required>
+          <option value="1">1</option>
+        </select>
+        <label for="day"></label>
+        <input type="number" id="day" required>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" required>
+          <option value="female">female</option>
+          <option value="male">male</option>
+        </select>
+        <label for="email">Recovery Email<span>(Optional)</span></label>
+        <input type="text" id="email">
+      </fieldset>
+      <fieldset>
+        <legend>휴대폰 인증</legend>
+        <label for="country">Mobile Phone</label>
+        <select name="country" id="country" required>
+          <option value="Korea">Korea</option>
+        </select>
+        <label for="phone"></label>
+        <input type="text" id="phone">
+        <button type="button">Send code</button>
+        <label for="phonecheck"></label>
+        <input type="text" id="phonecheck">
+      </fieldset>
+    </form>
+    <button type="submit">Sign Up</button>
+  </main>
+  <footer>
+    <small><a href="#">© NAVER Corp.</a></small>
+  </footer>
+</body>
+
+</html>
