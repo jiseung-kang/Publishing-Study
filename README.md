@@ -38,6 +38,16 @@
         <td>
           <a href="https://jiseung-kang.github.io/Publishing-Study/google/google.html">Google</a>
         </td>
+      </tr><tr>
+        <td>2회차 (12/30)</td>
+        <td>
+          <a href="#2">HTML Semantic MarkUp (1)</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/naver/naver_home.html">NAVER 메인페이지</a>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/naver/naver_agree.html">NAVER 약관동의</a>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/naver/naver_info.html">NAVER 회원가입</a>
+        </td>
       </tr>
     </tbody>
   </table>
