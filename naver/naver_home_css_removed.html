@@ -35,52 +35,57 @@
     </aside>
   </header>
   <article>
-    <h2>네이버 검색엔진</h2>
-    <fieldset>
-      <legend>검색</legend>
-      <label for="category"></label>
-      <select id="category">
-        <option value="통합검색" selected>통합검색</option>
-        <option value="블로그">블로그</option>
-        <option value="카페">카페</option>
-        <option value="카페명">- 카페명</option>
-        <option value="카페글">- 카페글</option>
-        <option value="지식iN">지식iN</option>
-        <option value="뉴스">뉴스</option>
-        <option value="사이트">사이트</option>
-        <option value="카테고리">- 카테고리</option>
-        <option value="사이트">- 사이트</option>
-        <option value="영화">영화</option>
-        <option value="웹문서">웹문서</option>
-        <option value="사전">사전</option>
-        <option value="백과사전">- 백과사전</option>
-        <option value="영어사전">- 영어사전</option>
-        <option value="영영사전">- 영영사전</option>
-        <option value="국어사전">- 국어사전</option>
-        <option value="일본어사전">- 일본어사전</option>
-        <option value="한자사전">- 한자사전</option>
-        <option value="용어사전">- 용어사전</option>
-        <option value="책">책</option>
-        <option value="음악">음악</option>
-        <option value="전문자료">전문자료</option>
-        <option value="쇼핑">쇼핑</option>
-        <option value="지역">지역</option>
-        <option value="동영상">동영상</option>
-        <option value="이미지">이미지</option>
-        <option value="내PC">내PC</option>
-        <option value="스마트파인더" disabled="true">스마트파인더</option>
-        <option value="영화">- 영화</option>
-        <option value="자동차">- 자동차</option>
-        <option value="게임">- 게임</option>
-        <option value="건강">- 건강</option>
-        <option value="인물">- 인물</option>
-        <option value="네이버 랩" disabled="true">네이버 랩</option>
-        <option value="긍정부정검색">긍정부정검색</option>
-      </select>
-      <label for="search-word"></label>
-      <input type="search" id="search-word" placeholder="검색어를 입력해주세요.">
-      <button type="button">검색</button>
-    </fieldset>
+    <form>
+      <h2>네이버 검색엔진</h2>
+      <fieldset>
+        <legend>검색 카테고리</legend>
+        <label for="category"></label>
+        <select id="category">
+          <option value="통합검색" selected>통합검색</option>
+          <option value="블로그">블로그</option>
+          <option value="카페">카페</option>
+          <option value="카페명">- 카페명</option>
+          <option value="카페글">- 카페글</option>
+          <option value="지식iN">지식iN</option>
+          <option value="뉴스">뉴스</option>
+          <option value="사이트">사이트</option>
+          <option value="카테고리">- 카테고리</option>
+          <option value="사이트">- 사이트</option>
+          <option value="영화">영화</option>
+          <option value="웹문서">웹문서</option>
+          <option value="사전">사전</option>
+          <option value="백과사전">- 백과사전</option>
+          <option value="영어사전">- 영어사전</option>
+          <option value="영영사전">- 영영사전</option>
+          <option value="국어사전">- 국어사전</option>
+          <option value="일본어사전">- 일본어사전</option>
+          <option value="한자사전">- 한자사전</option>
+          <option value="용어사전">- 용어사전</option>
+          <option value="책">책</option>
+          <option value="음악">음악</option>
+          <option value="전문자료">전문자료</option>
+          <option value="쇼핑">쇼핑</option>
+          <option value="지역">지역</option>
+          <option value="동영상">동영상</option>
+          <option value="이미지">이미지</option>
+          <option value="내PC">내PC</option>
+          <option value="스마트파인더" disabled="true">스마트파인더</option>
+          <option value="영화">- 영화</option>
+          <option value="자동차">- 자동차</option>
+          <option value="게임">- 게임</option>
+          <option value="건강">- 건강</option>
+          <option value="인물">- 인물</option>
+          <option value="네이버 랩" disabled="true">네이버 랩</option>
+          <option value="긍정부정검색">긍정부정검색</option>
+        </select>
+        <fieldset>
+          <legend>검색어</legend>
+          <label for="search-word"></label>
+          <input type="search" id="search-word" placeholder="검색어를 입력해주세요.">
+          <button type="button">검색</button>
+        </fieldset>
+      </fieldset>
+    </form>
     <div>
       <button type="button">한글 입력기</button>
       <button type="button">자동완성 레이어</button>
@@ -158,31 +163,29 @@
     <h2>네이버 서비스</h2>
     <section>
       <h3>서비스 카테고리</h3>
-      <ul>
-        <p>ㄱ-ㅁ</p>
-        <a href="#">날씨</a>
-        <a href="#">네이버 MY CAR</a>
-        <a href="#">
-          네이버 게임
-          네이버 예약
-        </a>
-        <a href="#">네이버 프리미엄콘텐츠</a>
-        <a href="#">네이버플러스 멤버십</a>
-        <a href="#">뉴스</a>
-        <a href="#">데이터랩</a>
-        <a href="#">메모</a>
-      </ul>
-      <ul>
-        <p>ㅂ-ㅅ</p>
+      <dl>
+        <dt>ㄱ-ㅁ</dt>
+        <dd><a href="#">날씨</a></dd>
+        <dd><a href="#">네이버 MY CAR</a></dd>
+        <dd><a href="#">네이버 게임</a></dd>
+        <dd><a href="#"> 네이버 예약</a></dd>
+        <dd><a href="#">네이버 프리미엄콘텐츠</a></dd>
+        <dd><a href="#">네이버플러스 멤버십</a></dd>
+        <dd><a href="#">뉴스</a></dd>
+        <dd><a href="#">데이터랩</a></dd>
+        <dd><a href="#">메모</a></dd>
+      </dl>
+      <dl>
+        <dt>ㅂ-ㅅ</dt>
         <a>밴드</a>
         <a>부동산</a>
         <a>북마크</a>
         <a>스포츠</a>
         <a>시리즈</a>
         <a>시리즈온</a>
-      </ul>
-      <ul>
-        <p>ㅇ</p>
+      </dl>
+      <dl>
+        <dt>ㅇ</dt>
         <a>엑스퍼트</a>
         <a>영화</a>
         <a>오디오클립</a>
@@ -191,18 +194,18 @@
         <a href="#">웹소설</a>
         <a href="#">웹툰</a>
         <a href="#">인플루언서 검색</a>
-      </ul>
-      <ul>
-        <p>ㅈ-ㅊ</p>
+      </dl>
+      <dl>
+        <dt>ㅈ-ㅊ</dt>
         <a>자동차</a>
         <a>주소록</a>
         <a>증권</a>
         <a>지도</a>
         <a>지식백과</a>
         <a>책</a>
-      </ul>
-      <ul>
-        <p>ㅋ-ㅎ</p>
+      </dl>
+      <dl>
+        <dt>ㅋ-ㅎ</dt>
         <a>캘린더</a>
         <a>클로바더빙</a>
         <a>파파고</a>
@@ -210,9 +213,9 @@
         <a>학술정보</a>
         <a>항공권</a>
         <a>호텔</a>
-      </ul>
-      <ul>
-        <p>A-Z</p>
+      </dl>
+      <dl>
+        <dt>A-Z</dt>
         <a>
           Keep
           modoo!
@@ -222,9 +225,9 @@
         <a>TV연예</a>
         <a>VLIVE</a>
         <a>VIBE</a>
-      </ul>
-      <ul>
-        <p>사전</p>
+      </dl>
+      <dl>
+        <dt>사전</dt>
         <a>사전</a>
         <a>국어사전</a>
         영<a>어/영영사전</a>
@@ -232,12 +235,12 @@
         <a>중국어사전</a>
         <a>한자사전</a>
         <a>사전 더보기</a>
-      </ul>
+      </dl>
     </section>
     <section>
       <h3>서비스 카테고리 선택</h3>
-      <ul>
-        <p>ㄱ-ㅁ</p>
+      <dl>
+        <dt>ㄱ-ㅁ</dt>
         <input type="checkbox" id="weather" name="날씨">
         <label for="weather">날씨</label>
         네이버 MY CAR
@@ -248,18 +251,18 @@
         뉴스
         데이터랩
         메모
-      </ul>
-      <ul>
-        <p>ㅂ-ㅅ</p>
+      </dl>
+      <dl>
+        <dt>ㅂ-ㅅ</dt>
         밴드
         부동산
         북마크
         스포츠
         시리즈
         시리즈온
-      </ul>
-      <ul>
-        <p>ㅇ</p>
+      </dl>
+      <dl>
+        <dt>ㅇ</dt>
         엑스퍼트
         영화
         오디오클립
@@ -268,18 +271,18 @@
         웹소설
         웹툰
         인플루언서 검색
-      </ul>
-      <ul>
-        <p>ㅈ-ㅊ</p>
+      </dl>
+      <dl>
+        <dt>ㅈ-ㅊ</dt>
         자동차
         주소록
         증권
         지도
         지식백과
         책
-      </ul>
-      <ul>
-        <p>ㅋ-ㅎ</p>
+      </dl>
+      <dl>
+        <dt>ㅋ-ㅎ</dt>
         캘린더
         클로바더빙
         파파고
@@ -287,9 +290,9 @@
         학술정보
         항공권
         호텔
-      </ul>
-      <ul>
-        <p>A-Z</p>
+      </dl>
+      <dl>
+        <dt>A-Z</dt>
         Keep
         modoo!
         MYBOX
@@ -297,9 +300,9 @@
         TV연예
         V LIVE
         VIBE
-      </ul>
-      <ul>
-        <p>사전</p>
+      </dl>
+      <dl>
+        <dt>사전</dt>
         사전
         국어사전
         영어/영영사전
@@ -307,7 +310,7 @@
         중국어사전
         한자사전
         사전 더보기
-      </ul>
+      </dl>
     </section>
     <section>
       <h3>광고</h3>
@@ -396,7 +399,7 @@
       <h3>주제별 캐스트</h3>
       <header>
         <p>오늘 읽을만한 글주제별로 분류된 다양한 글 모음
-          973 개의 글 <button type="button">관심주제 설정</button>
+          <span>973</span> 개의 글 <button type="button">관심주제 설정</button>
         </p>
         <button type="button">이전</button>
         <button type="button">다음</button>
