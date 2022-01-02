@@ -95,4 +95,55 @@
       <li>DOM Tree 구조(부모-자식 관계 / 형제 관계 구분하기)</li>
     </ul>
   </div>
+
+  <div id='2'>
+    <h2>2회차 : Google Clone, HTML Semantic MarkUp</h2>
+    <div>
+      <h3>Project Feedback</h3>
+      <ul>
+      </ul>
+    </div>
+    <div>
+      <h3>Study</h3>
+      <ul>
+        <li>form 태그
+          <ul>
+            <li>종류: button. a, input</li>
+            <li>submit : form태그 안의 내용이 한번에 전송된다.</li>
+          </ul>
+        <li>
+        <li> IE 사용 고려, role로 역할부여하여 semantic한 태그 구성하기
+          <ul>
+            <li>main role="main</li>
+            <li>a role="button</li>
+          </ul>
+        </li>
+        <li></li>
+        <li>nav : 책갈피. 도메인이 변경되는 링크들의 묶음에 대해서는 지양하기</li>
+        <li>dl, dt, dd 적정하게 활용하기</li>
+        <li>HTML 지식</li>
+          <ul>
+            <li>HyperText Markup Language</li>
+            <li>Web Standards : W3C<=>WHATWG</li>
+            <li>contenteditable : true => 편집 가능</li>
+            <li>SVG : XML</li>
+          </ul>
+      </ul>
+    </div>
+  </div>
+  
+  
+  <!-- <div id=''>
+    <h2>회차 : </h2>
+    <div>
+      <h3>Project Feedback</h3>
+      <ul>
+      </ul>
+    </div>
+    <div>
+      <h3>Study</h3>
+      <ul>
+      </ul>
+    </div>
+  </div> -->
 </div>
