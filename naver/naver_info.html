@@ -9,50 +9,161 @@
 </head>
 
 <body>
-  <h1>NAVER</h1>
+  <h1><a href="#">NAVER</a></h1>
+  <a href="#">본문으로 바로가기</a>
   <img src="#" alt="NAVER logo">
   <main>
-    <h2>회원가입 양식</h2>
+    <h2>Naver Sign Up</h2>
     <form action="#" method="POST">
       <fieldset>
-        <legend>아이디 및 비밀번호</legend>
-        <label for="firstname">Name</label>
-        <input type="text" id="firstname" required>
-        <label for="lastname"></label>
-        <input type="text" id="lastname" required>
-        <label for="year">DOB</label>
-        <input type="number" id="year" required>
-        <label for="month"></label>
-        <select name="month" id="month" required>
-          <option value="1">1</option>
-        </select>
-        <label for="day"></label>
-        <input type="number" id="day" required>
-        <label for="gender">Gender</label>
-        <select name="gender" id="gender" required>
-          <option value="female">female</option>
-          <option value="male">male</option>
-        </select>
-        <label for="email">Recovery Email<span>(Optional)</span></label>
-        <input type="text" id="email">
+        <legend>Username</legend>
+        <label for="id"></label>
+        <input type="text" id="id" required>
+        <span>@naver.com You can't leave this empty.</span>
       </fieldset>
       <fieldset>
-        <legend>휴대폰 인증</legend>
+        <legend>Password</legend>
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+        <label for="passwordconfirm">Password Confirm</label>
+        <input type="password" id="passwordconfirm" required>
+        <span>설정하려는 비밀번호가 맞는지 확인하기 위해 다시 입력 해주세요.</span>
+      </fieldset>
+      <fieldset>
+        <legend>Name</legend>
+        <label for="firstname"></label>
+        <input type="text" id="firstname" placeholder="First Name" required>
+        <label for="lastname"></label>
+        <input type="text" id="lastname" placeholder="Last Name" required>
+      </fieldset>
+      <fieldset>
+        <legend>DOB</legend>
+        <label for="year">Year</label>
+        <input type="number" id="year" placeholder="Year(4dgt)" required>
+        <label for="month">Year</label>
+        <select name="month" id="month" required>
+          <option value="Month" checked>Month</option>
+          <option value="1">1</option>
+        </select>
+        <label for="day">Day</label>
+        <input type="number" id="day" placeholder="Day" required>
+        <span>Please enter a valid birthday.</span>
+      </fieldset>
+      <fieldset>
+        <legend>Information</legend>
+        <label for="gender">Gender</label>
+        <select name="gender" id="gender" required>
+          <option value="gender">Gender</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <label for="email">Recovery Email<span>(Optional)</span></label>
+        <input type="text" id="email" placeholder="Optional">
+      </fieldset>
+      <fieldset>
+        <legend>Mobile Phone</legend>
         <label for="country">Mobile Phone</label>
         <select name="country" id="country" required>
           <option value="Korea">Korea</option>
         </select>
         <label for="phone"></label>
-        <input type="text" id="phone">
+        <input type="text" id="phone" placeholder="Enter Phone Number">
         <button type="button">Send code</button>
         <label for="phonecheck"></label>
-        <input type="text" id="phonecheck">
+        <input type="text" id="phonecheck" placeholder="Enter verification code">
+        <span>인증받은 후 인증번호를 입력해야 합니다.</span>
       </fieldset>
+      <ul>
+        <li><button type="button">휴대전화인증</button></li>
+        <li><button type="button">아이핀 인증</button></li>
+      </ul>
+
+      <ul>
+        <label for="all">아래 약관에 모두 동의합니다.</label>
+        <input type="checkbox" id="all">
+        <label for="use"><a href="#">개인정보 이용</a> </label>
+        <input type="checkbox" id="use">
+
+        <label for="manage"><a href="#">고유식별정보 처리</a> </label>
+        <input type="checkbox" id="manage">
+
+        <label for="telophone"><a href="">통신사 이용약관 </a></label>
+        <input type="checkbox" id="telephone">
+
+        <label for="pass"><a href="#">인증사 이용약관 </a> </label>
+        <input type="checkbox" id="pass">
+
+        <label for="naver"><a href="#">네이버 개인정보 수집</a></label>
+        <input type="checkbox" id="naver">
+
+        <span>필수 정보입니다.</span>
+      </ul>
+      <fieldset>
+        <legend>Protector Name</legend>
+        <label for="pname"></label>
+        <input type="text" id="pname" required>
+        <span>필수 정보입니다.</span>
+      </fieldset>
+      <fieldset>
+        <legend>DOB</legend>
+        <label for="pyear">Year</label>
+        <input type="number" id="pyear" placeholder="Year(4dgt)" required>
+        <label for="pmonth">Year</label>
+        <select name="month" id="pmonth" required>
+          <option value="Month" checked>Month</option>
+          <option value="1">1</option>
+        </select>
+        <label for="pday">Day</label>
+        <input type="number" id="pday" placeholder="Day" required>
+        <span>Please enter a valid birthday.</span>
+      </fieldset>
+      <fieldset>
+        <legend>Gender/Country</legend>
+        <label for="pgender">Gender</label>
+        <select name="gender" id="pgender" required>
+          <option value="gender">Gender</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="pcountry">Country</label>
+        <select name="country" id="pcountry" required>
+          <option value="내국인">내국인</option>
+          <option value="외국인">외국인</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>Protector Mobile Phone</legend>
+        <label for="pphone"></label>
+        <input type="text" id="pphone" placeholder="Enter Phone Number">
+        <button type="button">Send code</button>
+        <label for="phonecheck"></label>
+        <input type="text" id="phonecheck" placeholder="Enter verification code">
+        <span>인증받은 후 인증번호를 입력해야 합니다.</span>
+        <span>필수 정보입니다.</span>
+      </fieldset>
+      <ul>
+        <li><button type="button">휴대전화인증</button></li>
+        <li><button type="button">아이핀 인증</button></li>
+      </ul>
+
+      <label for="pconfrim"></label>
+      <input type="checkbox">보호자 인증이 완료되면 보호자 이름, 생년월일, 성별, 중복가입확인정보(DI)가 보호자 동의 확인을
+      위하여 아동의 정보와 함께 저장되며, 아동이 성년이 되는 시점에 파기됩니다. 필수 정보입니다.
+      <span>보호자 명의의 아이핀으로 인증 후
+        가입이 가능 합니다.</span>
+
+      <button>아이핀 인증하기</button>
+      <span>필수 정보입니다.</span>
     </form>
     <button type="submit">Sign Up</button>
   </main>
   <footer>
-    <small><a href="#">© NAVER Corp.</a></small>
+    <small><a href="#">naver</a><span><i>Copyright</i></span> ©<a href="#">NAVER Corp.</a><span><i>All Rights
+          Reserved.</i></span></small>
   </footer>
 </body>
 
