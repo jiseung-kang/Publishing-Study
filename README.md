@@ -56,7 +56,8 @@
           <a href="#3">HTML Semantic MarkUp (3)</a>
         </td>
         <td>
-          <a href="https://jiseung-kang.github.io/Publishing-Study/wadiz/wadiz.html">NAVER 메인페이지</a>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/wadiz/wadiz.html">wadiz 펀딩페이지</a><br>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/form/form.html">Form CSS 연습</a>
         </td>
       </tr>
     </tbody>

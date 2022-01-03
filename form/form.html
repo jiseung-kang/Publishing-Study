@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <style>
+    input:checked+label {
+      display: block;
+      width: 50px;
+      height: 50px;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>좋아하는 과목을 고르세요 (택1)</legend>
+      <input type="radio" name="like" id="like-html" value="like-html">
+      <label for="like-html">HTML</label>
+      <input type="radio" name="like" id="like-css" value="like-css">
+      <label for="like-css">CSS</label>
+      <input type="radio" name="like" id="like-js" value="like-js">
+      <label for="like-js">JS</label>
+    </fieldset>
+    <fieldset>
+      <legend>스터디할 과목을 고르세요 (다중 선택)</legend>
+      <input type="checkbox" name="study" id="study-html" value="study-html">
+      <label for="study-html">HTML</label>
+      <input type="checkbox" name="study" id="study-css" value="study-css">
+      <label for="study-css">CSS</label>
+      <input type="checkbox" name="study" id="study-js" value="study-js">
+      <label for="study-js">JS</label>
+    </fieldset>
+    <fieldset>
+      <legend>신분증을 첨부해주세요</legend>
+      <label for="idcard">신분증 파일 추가</label>
+      <input type="file">
+    </fieldset>
+  </form>
+</body>
+</html>
