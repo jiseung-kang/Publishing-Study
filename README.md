@@ -108,7 +108,7 @@
   </div>
 
   <div id='2'>
-    <h2>2회차 : Google Clone, HTML Semantic MarkUp</h2>
+    <h2>2회차 : Naver Clone, HTML Semantic MarkUp</h2>
     <div>
       <h3>Project Feedback</h3>
       <ul>
@@ -142,6 +142,20 @@
       </ul>
     </div>
   </div>
+
+  <div id='3'>
+  <h2>3회차 : Wadiz Clone, HTML Semantic MarkUp</h2>
+  <div>
+    <h3>Project Feedback</h3>
+    <ul>
+    </ul>
+  </div>
+  <div>
+    <h3>Study</h3>
+    <ul>
+    </ul>
+  </div>
+</div>
   
   
   <!-- <div id=''>
