@@ -270,3 +270,45 @@ main {
   font-size: 12px;
   justify-content: space-between;
 }
+
+progress {
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+  background-color: white;
+}
+
+::-webkit-progress-value {
+  background-color: yellow;
+}
+
+.bar-100::-webkit-progress-value {
+  background-color: red;
+}
+
+.bar-80::-webkit-progress-value {
+  background-color: blue;
+}
+
+.bar-70::-webkit-progress-value {
+  background-color: green;
+}
+
+.bar-50::-webkit-progress-value {
+  background-color: aqua;
+}
+
+
+
+.btn-chatbot {
+  display: block;
+  position: fixed;
+  color: white;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 100%;
+  bottom: 20px;
+  right: 20px;
+}
