@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./modal.css">
+</head>
+<body>
+  <div class="dimm"></div>
+  <div class="modalWrap">
+    <article class="contents">
+      MODAL
+    </article>
+    <!-- 4. animation : ball이 modalWrap을 반복해서 도는 애니메이션 만들기 -->
+    <!-- 5. animation : 구름 애니메이션, dimm과 modalWrap 사이로 지나가기 반복해서, 서로 속도가 다르게 -->
+    <div class="ball"></div>
+    <img src="../a.jpg" alt="space">
+
+    <!-- 6. transition : modalWrap에 마우스를 올렸을때, box-shadow나오게 만들기 -->
+    <!-- 7. transition : modalWrap에 마우스를 올렸을때, 캐릭터가 아래에서 위로 나오기 -->
+
+    <a href="javascript:void(0);" class="btn prev">PREV</a>
+    <a href="javascript:void(0);" class="btn next">NEXT</a>
+    <!-- 1. font 축약형:  -->
+    <!-- font: italic 1.2em "Fira Sans", serif; -->
+    <!-- 2. flex : grow, shrink, basis-->
+    <!-- flex: 0 1 auto; 기본값-->
+    <!-- flex: 1 1 100px; -->
+    <!-- 3. modal position, slider -->
+    <div class="indicator">
+      <input type="radio" name="pos" id="pos1" checked>
+      <input type="radio" name="pos" id="pos2">
+      <input type="radio" name="pos" id="pos3">
+      <input type="radio" name="pos" id="pos4">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <p class="bullet">
+        <label for="pos1"></label>
+        <label for="pos2"></label>
+        <label for="pos3"></label>
+        <label for="pos4"></label>
+      </p>
+    </div>
+
+    <button type="button" class="btnClose">
+      X
+    </button>
+  </div>
+
+</body>
+</html>

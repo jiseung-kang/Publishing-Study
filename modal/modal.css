@@ -1,0 +1,143 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: url('./images/dummy_1.jpg') no-repeat center center/cover;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.dimm {
+  position: fixed;
+  background-color: rgba(55, 55, 59, 0.7);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modalWrap {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  position: fixed;
+  width: 700px;
+  height: 40vh;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.modalWrap:hover {
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+.modalWrap::after {
+  background-image: url('../robo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  right: 20px;
+  bottom: -200px;
+  display: block;
+  content: '';
+
+}
+
+.modalWrap:hover:after {
+  transition: 5s;
+  transform: translateY(-300px);
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  25% {
+    transform: translate(600px, 0px);
+  }
+
+  50% {
+    transform: translate(600px, 250px);
+  }
+
+  75% {
+    transform: translate(0px, 250px);
+
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: olivedrab;
+  animation: move 3s infinite;
+}
+
+.btnClose {
+  position: absolute;
+  top: -70px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+}
+
+.indicator {
+  position: absolute;
+  left: calc(50% - 60px);
+  width: 200px;
+  bottom: 0;
+  z-index: 2;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator li {
+  padding-right: 10px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+}
+
+.prev {
+  position: absolute;
+  left: 10px;
+  top: calc(50% - 25px);
+}
+
+.next {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 25px);
+}

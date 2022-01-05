@@ -57,7 +57,7 @@
         </td>
         <td>
           <a href="https://jiseung-kang.github.io/Publishing-Study/wadiz/wadiz.html">wadiz 펀딩페이지</a><br>
-          <a href="https://jiseung-kang.github.io/Publishing-Study/form/form.html">Form CSS 연습</a>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/form/form.html">Form CSS 연습</a><br>
         </td>
       </tr>
     </tbody>
@@ -148,16 +148,20 @@
   <div>
     <h3>Project Feedback</h3>
     <ul>
+      <li>blind처리, 그러나 스크린리더가 읽게 하고 싶을 때 방법 예시: font-size:1px; color:transparent; 이런 식으로 처리할 수도 있다. 다만 width:0px; height:0px; font-size:0px의 경우 마크업 처리되지 않는다. </li>
     </ul>
   </div>
   <div>
     <h3>Study</h3>
     <ul>
+      <li><a href="https://jiseung-kang.github.io/Publishing-Study/Study/0104_position.html"></a></li>
+      <li>가운데 정렬: block, flex는 margin으로 정렬</li>
+      <li>margin auto 남는 영역을 나눠 가진다.</li>
+      <li>inline은 크기를 지정할 수 없다. 상하 여백(padding, margin) 불가능</li>
     </ul>
   </div>
 </div>
-  
-  
+
   <!-- <div id=''>
     <h2>회차 : </h2>
     <div>
