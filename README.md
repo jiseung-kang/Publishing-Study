@@ -68,7 +68,7 @@
   <h2>1회차 : Google Clone, HTML Semantic MarkUp</h2>
   - 레퍼런스 이미지
   <img src="./google/reference.png" alt="google screenshot"/>
-  - <a href="https://jiseung-kang.github.io/Publishing-Study/google/google.html">과제</a> 미리보기
+  - <a href="https://jiseung-kang.github.io/Publishing-Study/google/google.html">구글 과제</a> 미리보기
   <img src="./google/preview.png" alt="google-clone screenshot"/>
 
   <div>
@@ -109,6 +109,12 @@
 
   <div id='2'>
     <h2>2회차 : Naver Clone, HTML Semantic MarkUp</h2>
+      - <a href="https://jiseung-kang.github.io/Publishing-Study/naver/naver_home.html">네이버 메인 페이지 과제</a> 미리보기<br>
+      <img src="./naver/preview_home.gif" alt="naver home preview"/><br>
+      - <a href="https://jiseung-kang.github.io/Publishing-Study/naver/agree.html">네이버 개인정보 동의페이지 과제</a> 미리보기<br>
+      <img src="./naver/preview_agree.gif" alt="naver agree preview"/><br>
+      - <a href="https://jiseung-kang.github.io/Publishing-Study/naver/naver_info.html">네이버 개인정보 과제</a> 미리보기<br>
+  <img src="./naver/preview_info.gif" alt="naver info preview"/>
     <div>
       <h3>Project Feedback</h3>
       <ul>
@@ -145,6 +151,10 @@
 
   <div id='3'>
   <h2>3회차 : Wadiz Clone, HTML Semantic MarkUp</h2>
+  - <a href="https://jiseung-kang.github.io/Publishing-Study/wadiz/wadiz.html">와디즈 과제</a> 미리보기
+  <img src="./wadiz/preview.png" alt="wadiz-clone screenshot"/>
+  - <a href="https://jiseung-kang.github.io/Publishing-Study/form/form.html">Form 과제</a> 미리보기 <br>
+  <img src="./form/preview.gif" alt="form screenshot"/>
   <div>
     <h3>Project Feedback</h3>
     <ul>
