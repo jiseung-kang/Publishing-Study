@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLEX 개념알기</title>
+    <style>
+        .wrap {
+            margin:100px auto;
+            width:500px;
+            height:300px;
+            border:1px solid red;
+            display:flex; 
+            justify-content:space-between;
+        }
+
+        .a { 
+            background-color:coral;  
+            flex-grow:2;
+            flex-shrink:0;
+            /* width:300px; */
+
+            flex:2 0 300px;
+            flex:0 1 auto; /* flex-grow, flex-shrink, flex-basis */
+
+            flex:1; /* 1 1 auto  */
+        }
+
+        p {
+            font:900 100px/1 arial-black,sans-serif;
+            letter-spacing:-4px;
+            color:#333;
+            box-shadow:0 0 10px rgba(0,0,0,0.5);
+            padding:20px;
+            text-align:center;
+            background:#222;
+            text-shadow:1px 1px 0 rgba(255,255,255,0.3),           -1px -1px 0 rgba(0,0,0,0.9);
+            transition:padding 0.5s, color 0.4s 0.3s,
+            text-shadow 0.5s 0.4s; 
+        }
+
+        p:hover {
+            text-shadow:0 0 10px rgb(39, 255, 147);
+            padding:50px;
+            color:gold;
+        }
+
+        article {
+            width:500px;height:300px;
+            border:2px solid black;
+            background-color:#333;
+            background-image:url('../images/ryan.jpeg'), url('../images/ryan.png'); 
+            background-position:left top, right top;
+            background-size:200px, 150px ;
+            background-repeat:no-repeat;
+            transition:all 0.4s;
+        }
+
+        article:hover {
+            background-position:center top;
+            /* 
+                background:red none repeat left top/auto;
+            */
+        }
+
+
+        /* 
+
+        button {
+            border:0;  border:0 none black 
+            border:none;  border:3px none black  
+        }
+        border-width: 3px;
+        border-color: black;
+        border-style: none;
+        */
+
+        .box1 {
+            border:solid; /*  border:solid 3px black  */
+        }
+
+        .box2 {
+            border:1px red; /* border:none 3px black */
+        }
+
+        .box3 {
+            border:solid red; /* border:3px soild red */
+        }
+
+        .b { 
+            background-color:olive; 
+            /* flex-grow:1; */
+            flex-shrink:1;
+            width:200px;
+            
+        }
+
+        .c { 
+            background-color:gold;  
+            /* flex-grow:1; */
+            flex-shrink:1;
+            width:200px;
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <p>
+        STUDY GROUP
+    </p>
+    <article></article>
+    <div class="wrap">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+    </div>
+    <div class="box1">BOX1</div>
+    <div class="box2">BOX2</div>
+    <div class="box3">BOX3</div>
+</body>
+</html>

@@ -161,9 +161,9 @@
   <div id='3'>
   <h2>3회차 : Wadiz Clone, HTML Semantic MarkUp</h2>
   - <a href="https://jiseung-kang.github.io/Publishing-Study/wadiz/wadiz.html">와디즈 과제</a> 미리보기
-  <img src="./wadiz/preview.png" alt="wadiz-clone screenshot"/>
+  <img src="./wadiz/preview.png" alt="wadiz-clone preview"/>
   - <a href="https://jiseung-kang.github.io/Publishing-Study/form/form.html">Form 과제</a> 미리보기 <br>
-  <img src="./form/preview.gif" alt="form screenshot"/>
+  <img src="./form/preview.gif" alt="form preview"/>
   <div>
     <h3>Project Feedback</h3>
     <ul>
@@ -182,15 +182,26 @@
 </div>
   
 <div id='4'>
-    <h2>4회차 : </h2>
+    <h2>4회차 : CSS (1) </h2>
+    - <a href="https://jiseung-kang.github.io/Publishing-Study/modal/modal.html">모달 과제</a> 미리보기
+  <img src="./modal/preview.gif" alt="modal preview"/>
     <div>
       <h3>Project Feedback</h3>
       <ul>
+        <li>부모 자식 관계에 유의한 position 설정하기</li>
+        <li>width값은 꼭 필요할 때만 설정하기. 100% 남용하지 않기</li>
       </ul>
     </div>
     <div>
       <h3>Study</h3>
       <ul>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/flex/flex.html">Flex, Multi Properties 실습</a></li>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/flex/flex_test.html">Flex 실습</a></li>
+        <li>flex-grow : 기본값은 0. flex 정렬시 여백을 꽉 채우고 싶을 때. 남은 영역에 대해 나눠 갖는 정도</li>
+        <li><img src="flex/flex-grow.png" alt="flex grow"></li>
+        <li>flex-shrink : 넘쳐서 overflow상황일 때, 기본값은 1. 더 줄어들어도 되는 정도</li>
+        <li>flex-basis : flex 진행 방향으로의 크기</li>
+        <li>축약형은 유의해서 쓰기 : 특히 가상 선택자에서 원하는 속성을 명확하게 명시하기. ex) background-color</li>
       </ul>
     </div>
   </div>
