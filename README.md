@@ -60,6 +60,15 @@
           <a href="https://jiseung-kang.github.io/Publishing-Study/form/form.html">Form CSS 연습</a><br>
         </td>
       </tr>
+      <tr>
+        <td>4회차 (01/06)</td>
+        <td>
+          <a href="#4">CSS (1)</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/modal/modal.html">CSS 연습</a>
+        </td>
+      </tr>
     </tbody>
   </table>
 </nav>
