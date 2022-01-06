@@ -134,28 +134,27 @@ img {
   overflow: hidden;
 }
 
-.cloud1 {
+.cloud {
   display: block;
+  border-radius: 50%;
+  background: white;
+  z-index: 20;
+}
+
+.cloud1 {
   position: relative;
   width: 100px;
   height: 100px;
   top: 50%;
-  border-radius: 50%;
-  background: white;
   animation: cloud1 5s infinite;
-  z-index: 20;
 }
 
 .cloud2 {
-  display: block;
   position: absolute;
   width: 50px;
   height: 50px;
-  top: 10px;
-  border-radius: 50%;
-  background: white;
+  top: 10%;
   animation: cloud2 20s infinite;
-  z-index: 20;
 }
 
 .ball {
@@ -176,17 +175,13 @@ img {
 
 .indicator {
   position: absolute;
-  left: calc(50% - 60px);
-  width: 200px;
-  bottom: 0;
-  z-index: 2;
-  height: 300px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  left: 0;
+  bottom: 5%;
+  margin: 0 auto;
   overflow: hidden;
-}
-
-.indicator li {
-  padding-right: 10px;
 }
 
 .btn {
