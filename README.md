@@ -173,13 +173,27 @@
   <div>
     <h3>Study</h3>
     <ul>
-      <li><a href="https://jiseung-kang.github.io/Publishing-Study/Study/0104_position.html"></a></li>
+      <li><a href="https://jiseung-kang.github.io/Publishing-Study/Study/0104_position.html">position 연습</a></li>
       <li>가운데 정렬: block, flex는 margin으로 정렬</li>
       <li>margin auto 남는 영역을 나눠 가진다.</li>
       <li>inline은 크기를 지정할 수 없다. 상하 여백(padding, margin) 불가능</li>
     </ul>
   </div>
 </div>
+  
+<div id='4'>
+    <h2>4회차 : </h2>
+    <div>
+      <h3>Project Feedback</h3>
+      <ul>
+      </ul>
+    </div>
+    <div>
+      <h3>Study</h3>
+      <ul>
+      </ul>
+    </div>
+  </div>
 
   <!-- <div id=''>
     <h2>회차 : </h2>
