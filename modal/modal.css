@@ -78,15 +78,15 @@ img {
   }
 
   25% {
-    transform: translate(500px, 0px);
+    transform: translate(600px, 0px);
   }
 
   50% {
-    transform: translate(500px, 100px);
+    transform: translate(600px, 250px);
   }
 
   75% {
-    transform: translate(0px, 100px);
+    transform: translate(0px, 250px);
 
   }
 
