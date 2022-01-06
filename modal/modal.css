@@ -53,26 +53,38 @@ img {
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
+.btnClose {
+  position: absolute;
+  top: -50px;;
+  left: calc(50% - 25px);
+  border: 1px solid black;
+  background: none;
+}
+
+.modalWrap:hover .btnClose{
+  transform: translateY(70px);
+  transition: 1s;
+}
+
 .modalWrap::after {
+  position: absolute;
+  content: '';
   background-image: url('../robo.jpg');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: calc(50% - 100px);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  left: calc(50% - 50px);
   bottom: -200px;
-  display: block;
-  content: '';
-
 }
 
 .modalWrap:hover:after {
-  transition: 5s;
+  transition: 3s;
   transform: translateY(-300px);
 }
 
-@keyframes move {
+@keyframes ball {
   0% {
     transform: translate(0%, 0%);
   }
@@ -113,7 +125,6 @@ img {
 @keyframes cloud2 {
   0% {
     transform: translateX(calc(100vw + 100%));
-
   }
 
   50% {
@@ -162,16 +173,9 @@ img {
   height: 100px;
   border-radius: 50%;
   background: olivedrab;
-  animation: move 3s infinite;
+  animation: ball 3s infinite;
 }
 
-.btnClose {
-  position: absolute;
-  top: -70px;
-  left: calc(50% - 25px);
-  width: 50px;
-  height: 50px;
-}
 
 .indicator {
   position: absolute;
@@ -181,7 +185,7 @@ img {
   left: 0;
   bottom: 5%;
   margin: 0 auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .btn {
