@@ -63,10 +63,20 @@
       <tr>
         <td>4회차 (01/06)</td>
         <td>
-          <a href="#4">CSS (1)</a>
+          <a href="#4">CSS</a>
         </td>
         <td>
           <a href="https://jiseung-kang.github.io/Publishing-Study/modal/modal.html">CSS 연습</a>
+        </td>
+      </tr>
+      <tr>
+        <td>5회차 (01/09)</td>
+        <td>
+          <a href="#5">CSS, SASS</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/SASS/index.html">Reset 연습</a><br>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/SASS/target.html">Form SASS 연습</a><br>
         </td>
       </tr>
     </tbody>
@@ -182,7 +192,7 @@
 </div>
   
 <div id='4'>
-    <h2>4회차 : CSS (1) </h2>
+    <h2>4회차 : CSS </h2>
     - <a href="https://jiseung-kang.github.io/Publishing-Study/modal/modal.html">모달 과제</a> 미리보기
   <img src="./modal/preview.gif" alt="modal preview"/>
     <div>
@@ -202,6 +212,22 @@
         <li>flex-shrink : 넘쳐서 overflow상황일 때, 기본값은 1. 더 줄어들어도 되는 정도</li>
         <li>flex-basis : flex 진행 방향으로의 크기</li>
         <li>축약형은 유의해서 쓰기 : 특히 가상 선택자에서 원하는 속성을 명확하게 명시하기. ex) background-color</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id='5'>
+    <h2>5회차 : SASS</h2>
+    <div>
+      <h3>Study</h3>
+      - Reset 전 기본 태그
+      <img src="SASS/reset_preview.png" alt="기본 태그">
+      <ul>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/SASS/scss/_reset.scss">Reset 연습</a></li>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/SASS/scss">SASS 연습</a></li>
+        <li>SASS(들여쓰기) => SCSS(중괄호)</li>
+        <li>sass 변환할 .scss파일:변환되는 .css파일</li>
+        <li>sass --watch scss:css</li>
       </ul>
     </div>
   </div>
