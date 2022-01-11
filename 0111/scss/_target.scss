@@ -1,0 +1,57 @@
+@charset "utf-8"; 
+
+.target {
+    background-color:dodgerblue;
+    color:#fff;
+
+    .inner {
+        border:1px solid #fff;
+        background-color:lighten($point,10%);
+        border-radius:15px;
+        padding:20px;
+        height:200px;
+        overflow:auto;
+        margin:100px auto;
+        max-width:500px;
+    }
+
+    h1 {
+        font-size:100px;
+        text-align:center;
+    }
+
+    p {
+        line-height:1.2; 
+        margin:10px 0;
+
+        &:first-of-type {
+            background-color:$point;
+        }
+    }
+
+    img {
+        max-width:100%;
+        margin:10px 0;
+    }
+}
+
+.grayBox { 
+    div:nth-child(1) {
+        background-color:nth($gray, 1);
+    }
+    div:nth-child(2) {
+        background-color:nth($gray, 2);
+    }
+    div:nth-child(3) {
+        background-color:nth($gray, 3);
+    }
+    div:nth-child(4) {
+        background-color:nth($gray, 4);
+    }
+    div:nth-child(5) {
+        background-color:nth($gray, 5);
+    }
+    div:nth-child(6) {
+        background-color:nth($gray, 6);
+    }
+}
