@@ -16,7 +16,6 @@
     </li>
   </ul>
 </header>
-<br>
 <nav style="margin-top:30px;">
   <table style="width: 80%;">
     <thead>
@@ -75,8 +74,26 @@
           <a href="#5">CSS, SASS</a>
         </td>
         <td>
-          <a href="https://jiseung-kang.github.io/Publishing-Study/SASS/index.html">Reset 연습</a><br>
-          <a href="https://jiseung-kang.github.io/Publishing-Study/SASS/target.html">Form SASS 연습</a><br>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0109_sass/index.html">Reset 연습</a><br>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0109_sass/target.html">Form SASS 연습</a><br>
+        </td>
+      </tr>
+      <tr>
+        <td>6회차 (01/11)</td>
+        <td>
+          <a href="#6">SASS, php</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0111_php/index.html">SASS/PHP 연습</a>
+        </td>
+      </tr>
+      <tr>
+        <td>7회차 (01/14)</td>
+        <td>
+          <a href="#7">???</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/einsmedia/index.html">einsmedia 과제</a>
         </td>
       </tr>
     </tbody>
@@ -206,7 +223,6 @@
       <h3>Study</h3>
       <ul>
         <li><a href="https://jiseung-kang.github.io/Publishing-Study/flex/flex.html">Flex, Multi Properties 실습</a></li>
-        <li><a href="https://jiseung-kang.github.io/Publishing-Study/flex/flex_test.html">Flex 실습</a></li>
         <li>flex-grow : 기본값은 0. flex 정렬시 여백을 꽉 채우고 싶을 때. 남은 영역에 대해 나눠 갖는 정도</li>
         <li><img src="flex/flex-grow.png" alt="flex grow"></li>
         <li>flex-shrink : 넘쳐서 overflow상황일 때, 기본값은 1. 더 줄어들어도 되는 정도</li>
@@ -221,13 +237,34 @@
     <div>
       <h3>Study</h3>
       - Reset 전 기본 태그
-      <img src="SASS/reset_preview.png" alt="기본 태그">
+      <img src="0109_sass/reset_preview.png" alt="기본 태그">
       <ul>
-        <li><a href="https://jiseung-kang.github.io/Publishing-Study/SASS/scss/_reset.scss">Reset 연습</a></li>
-        <li><a href="https://jiseung-kang.github.io/Publishing-Study/SASS/scss">SASS 연습</a></li>
         <li>SASS(들여쓰기) => SCSS(중괄호)</li>
         <li>sass 변환할 .scss파일:변환되는 .css파일</li>
         <li>sass --watch scss:css</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id='6'>
+    <h2>6회차 : SASS, php</h2>
+    <div>
+      <h3>Study</h3>
+      <ul>
+        <li>module 방법 : php</li>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/0111_php/_index.html">php 연습</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id='7'>
+    <h2>7회차 : </h2>
+    - <a href="https://jiseung-kang.github.io/Publishing-Study/einsmedia/index.html">아인스미디어 과제</a> 미리보기
+    <img src="./einsmedia/preview.png" alt="einsmedia preview"/>
+    <div>
+      <h3>Study</h3>
+      <ul>
+        <li></li>
       </ul>
     </div>
   </div>

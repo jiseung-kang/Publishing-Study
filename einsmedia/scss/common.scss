@@ -1,0 +1,132 @@
+@charset "utf-8"; 
+
+@import 'variables','reset', 'mixin';
+
+.main-bg {
+  background: no-repeat url($url + 'bg7.jpg');
+  background-size: cover;
+  height: 100vh;
+  header {
+    @include flex-content(row, space-between);
+    font-weight: 500;
+    padding: 60px 5%;
+    img {
+      width: 150px;
+    }
+  
+    nav ul {
+      @include flex-content(row, space-between);
+      width: 55vw;
+      color: white;
+      
+      li {
+        padding: 10px;
+      }
+    }
+  }
+  article {
+    color: white;
+    margin-top: 25vh;
+
+    .wrap-btn {
+      @include flex-content(row, center);
+      position: absolute;
+      top: calc(50vh + 30px);
+      left: 1vw;
+      font-weight: 500;
+      color: white;
+      font-size: 24px;
+      transform: rotate(-90deg);
+
+      button {
+        padding: 30px;
+      }
+    }
+    h3 {
+      margin-left: 20vw;
+      font-size: 72px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 24px;
+      margin: 30px 0 0 20vw;
+      font-weight: 300;
+    }
+    .wrap-icon {
+      @include flex-content(row, center);
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      img {
+        margin-right: 30px;
+        height: 20px;
+      }
+    }
+  }  
+}
+
+#navigator {
+  @include flex-content(row, space-between);
+  position: fixed;
+  bottom: 3vh;
+  right: 0;
+  width: calc(50vw + 78px);
+  nav {
+    @include flex-content(row, center);
+    a {
+      width: 6px;
+      height: 6px;
+      border-radius: 100%;
+      margin: 10px;
+      background-color: lightgray;
+    }
+  }
+
+  ul {
+    @include flex-content(column, center);
+    padding-right: 5%;
+    li {
+      color: white;
+      margin: 5px;
+      text-shadow: 1px 1px 1px gray;
+      button {
+        @include flex-content(row, center);
+        background-color: red;
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+      }
+      img {
+        width: 30px;
+        padding: 20px;
+      }
+    }
+  }
+}
+
+/* media query */
+@include Max {
+
+}
+
+@include Large {
+
+}
+
+@include Medium {
+  .main-bg {
+    background-size: contain;
+  }
+}
+
+@include Small {
+  .main-bg {
+    background-size: contain;
+  }
+}
+
+@include Min {
+  .main-bg {
+    background-size: contain;
+  }
+}

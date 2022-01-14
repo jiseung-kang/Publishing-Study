@@ -1,0 +1,50 @@
+@charset "utf-8"; 
+
+@mixin reset-space {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-font {
+  font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+@mixin flex-content($axis, $justify) {
+  display: flex;
+  flex-direction: $axis;
+  align-items: center;
+  justify-content: $justify;
+}
+
+@mixin Max {
+  @media (min-width: #{$Max}){
+    @content;
+  }
+}
+
+@mixin Large {
+  @media (min-width: #{$Large}) and (max-width: #{$Max - 1px}) {
+    @content;
+  }
+}
+
+@mixin Medium {
+  @media (min-width: #{$Medium}) and (max-width: #{$Large - 1px}) {
+    @content;
+  }
+}
+
+@mixin Small {
+  @media (min-width: #{$Small}) and (max-width: #{$Medium - 1px}) {
+    @content;
+  }
+}
+
+@mixin Min {
+  @media (min-width: #{$Min}) and (max-width: #{$Small - 1px}) {
+    @content;
+  }
+}

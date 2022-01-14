@@ -1,0 +1,191 @@
+/* variables */
+/* reset */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Serif+KR:wght@400;500;600&display=swap");
+.a11y-hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body, ul, li, p, button {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-bg {
+  background: no-repeat url("../images/bg7.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.main-bg header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  padding: 60px 5%;
+}
+.main-bg header img {
+  width: 150px;
+}
+.main-bg header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 55vw;
+  color: white;
+}
+.main-bg header nav ul li {
+  padding: 10px;
+}
+.main-bg article {
+  color: white;
+  margin-top: 25vh;
+}
+.main-bg article .wrap-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: calc(50vh + 30px);
+  left: 1vw;
+  font-weight: 500;
+  color: white;
+  font-size: 24px;
+  transform: rotate(-90deg);
+}
+.main-bg article .wrap-btn button {
+  padding: 30px;
+}
+.main-bg article h3 {
+  margin-left: 20vw;
+  font-size: 72px;
+  font-weight: 600;
+}
+.main-bg article p {
+  font-size: 24px;
+  margin: 30px 0 0 20vw;
+  font-weight: 300;
+}
+.main-bg article .wrap-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.main-bg article .wrap-icon img {
+  margin-right: 30px;
+  height: 20px;
+}
+
+#navigator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 3vh;
+  right: 0;
+  width: calc(50vw + 78px);
+}
+#navigator nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#navigator nav a {
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  margin: 10px;
+  background-color: lightgray;
+}
+#navigator ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5%;
+}
+#navigator ul li {
+  color: white;
+  margin: 5px;
+  text-shadow: 1px 1px 1px gray;
+}
+#navigator ul li button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: red;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+#navigator ul li img {
+  width: 30px;
+  padding: 20px;
+}
+
+/* media query */
+@media (min-width: 948px) and (max-width: 1222px) {
+  .main-bg {
+    background-size: contain;
+  }
+}
+@media (min-width: 620px) and (max-width: 947px) {
+  .main-bg {
+    background-size: contain;
+  }
+}
+@media (min-width: 483px) and (max-width: 619px) {
+  .main-bg {
+    background-size: contain;
+  }
+}
+
+/*# sourceMappingURL=common.css.map */
