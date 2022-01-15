@@ -50,75 +50,83 @@ a {
   text-decoration: none;
 }
 
-.main-bg {
-  background: no-repeat url("../images/bg7.jpg");
-  background-size: cover;
+.main #bg {
+  width: 100vw;
   height: 100vh;
+  z-index: -1;
 }
-.main-bg header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 500;
-  padding: 60px 5%;
-}
-.main-bg header img {
-  width: 150px;
-}
-.main-bg header nav ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 55vw;
-  color: white;
-}
-.main-bg header nav ul li {
-  padding: 10px;
-}
-.main-bg article {
-  color: white;
-  margin-top: 25vh;
-}
-.main-bg article .wrap-btn {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+.main header {
   position: absolute;
-  top: calc(50vh + 30px);
-  left: 1vw;
+  top: 0;
+  right: 0;
+  width: 90vw;
+  font-weight: 500;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.main header img {
+  height: 30px;
+}
+.main header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+  color: white;
+}
+.main article {
+  position: absolute;
+  top: 40%;
+  bottom: 0;
+  color: white;
+}
+.main article .wrap-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  float: left;
+  margin-top: 10vh;
   font-weight: 500;
   color: white;
   font-size: 24px;
   transform: rotate(-90deg);
 }
-.main-bg article .wrap-btn button {
-  padding: 30px;
+.main article .wrap-btn button {
+  padding: 0px 10px;
 }
-.main-bg article h3 {
-  margin-left: 20vw;
+.main article h3 {
+  margin-left: 15vw;
   font-size: 72px;
   font-weight: 600;
 }
-.main-bg article p {
+.main article p {
   font-size: 24px;
-  margin: 30px 0 0 20vw;
+  margin: 30px 0 0 15vw;
   font-weight: 300;
 }
-.main-bg article .wrap-icon {
+.main article .wrap-icon {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: absolute;
-  bottom: 30px;
-  left: 30px;
+  left: 5vh;
+  bottom: 5vh;
 }
-.main-bg article .wrap-icon img {
+.main article .wrap-icon img {
   margin-right: 30px;
-  height: 20px;
+  height: 30px;
+}
+
+#home article {
+  display: relative;
+  border: 1px solid pink;
+  height: 100vh;
 }
 
 #navigator {
@@ -143,6 +151,9 @@ a {
   border-radius: 100%;
   margin: 10px;
   background-color: lightgray;
+}
+#navigator nav a:first-child {
+  background-color: red;
 }
 #navigator ul {
   display: flex;

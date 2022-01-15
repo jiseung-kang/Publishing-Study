@@ -2,67 +2,81 @@
 
 @import 'variables','reset', 'mixin';
 
-.main-bg {
-  background: no-repeat url($url + 'bg7.jpg');
-  background-size: cover;
-  height: 100vh;
+.main {
+  #bg {
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
   header {
-    @include flex-content(row, space-between);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90vw;
     font-weight: 500;
-    padding: 60px 5%;
+    padding: 5vh 5vw;
+    @include flex-content(row, space-between);
     img {
-      width: 150px;
+      height: 30px;
     }
   
     nav ul {
       @include flex-content(row, space-between);
-      width: 55vw;
+      width: 50vw;
       color: white;
-      
-      li {
-        padding: 10px;
-      }
     }
   }
   article {
+    position: absolute;
+    top: 40%;
+    bottom: 0;
     color: white;
-    margin-top: 25vh;
-
     .wrap-btn {
-      @include flex-content(row, center);
-      position: absolute;
-      top: calc(50vh + 30px);
-      left: 1vw;
+      @include flex-content(row, flex-start);
+      float: left;
+      margin-top: 10vh;
       font-weight: 500;
       color: white;
       font-size: 24px;
       transform: rotate(-90deg);
 
       button {
-        padding: 30px;
+        padding: 0px 10px;
       }
     }
     h3 {
-      margin-left: 20vw;
+      margin-left: 15vw;
       font-size: 72px;
       font-weight: 600;
     }
     p {
       font-size: 24px;
-      margin: 30px 0 0 20vw;
+      margin: 30px 0 0 15vw;
       font-weight: 300;
     }
     .wrap-icon {
-      @include flex-content(row, center);
+      @include flex-content(row, flex-start);
       position: absolute;
-      bottom: 30px;
-      left: 30px;
+      left: 5vh;
+      bottom: 5vh;
+      
       img {
         margin-right: 30px;
-        height: 20px;
+        height: 30px;
       }
     }
   }  
+}
+
+#home{
+  
+  article {
+    display: relative;
+    border: 1px solid pink;
+    height: 100vh;
+  }
+
+
 }
 
 #navigator {
@@ -79,6 +93,9 @@
       border-radius: 100%;
       margin: 10px;
       background-color: lightgray;
+    }
+    a:first-child {
+      background-color: red;
     }
   }
 
