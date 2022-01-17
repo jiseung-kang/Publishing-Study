@@ -1,92 +1,352 @@
 @charset "utf-8"; 
-
 @import 'variables','reset', 'mixin';
 
 .main {
-  #bg {
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+  position: relative;
+  display: block;
+  color: white;
+  .bg-main{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    @include background('bg7.jpg');
   }
   header {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 90vw;
-    font-weight: 500;
+    width: 90%;
+    font-weight: $medium;
     padding: 5vh 5vw;
-    @include flex-content(row, space-between);
+    @include flex-content(row, space-between, center);
     img {
       height: 30px;
     }
   
     nav ul {
-      @include flex-content(row, space-between);
-      width: 50vw;
-      color: white;
+      @include flex-content(row, space-between, center);
+      width: 60vw;
     }
   }
-  article {
-    position: absolute;
-    top: 40%;
-    bottom: 0;
-    color: white;
+  .wrap-main {
+    height: 100vh;
+    @include flex-content(row, flex-start, center);
     .wrap-btn {
-      @include flex-content(row, flex-start);
-      float: left;
-      margin-top: 10vh;
+      @include flex-content(row, flex-start, center);
       font-weight: 500;
-      color: white;
-      font-size: 24px;
+      font-size: 20px;
       transform: rotate(-90deg);
 
       button {
         padding: 0px 10px;
       }
     }
+    .wrap-para{
+      z-index: 10;
+    }
     h3 {
-      margin-left: 15vw;
-      font-size: 72px;
-      font-weight: 600;
+      font-size: $bigger;
+      font-weight: $bold;
     }
     p {
-      font-size: 24px;
-      margin: 30px 0 0 15vw;
-      font-weight: 300;
+      font-size: $normal;
+      margin-top: 30px;
+      font-weight: $light;
     }
-    .wrap-icon {
-      @include flex-content(row, flex-start);
-      position: absolute;
-      left: 5vh;
-      bottom: 5vh;
-      
-      img {
-        margin-right: 30px;
-        height: 30px;
-      }
+  }
+  .wrap-icon {
+    @include flex-content(row, flex-start, center);
+    position: absolute;
+    left: 5vh;
+    bottom: 5vh;
+    
+    img {
+      margin-right: 30px;
+      height: 30px;
     }
   }  
 }
 
 #home{
-  
+  display: block;
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+
   article {
+    padding: 10em 5em 5em 5em;
     display: relative;
-    border: 1px solid pink;
-    height: 100vh;
+    height: calc(100vh - 15em);
+    overflow: hidden;
+
+    .tit-sub {
+      display: block;
+      font-weight: $bold;
+      font-size: $big;
+      float: left;
+    }
+
+    .tit-sub:after{
+      position: relative;
+      content: '.';
+      color: red;
+    }
+
+    .txt-sub::before {
+      content: '';
+      position: absolute;
+      left: -60px;
+      top: 8px;
+      width: $big;
+      height: 3px;
+      background-color: black;
+    }
+
+    .txt-sub {
+      position: absolute;
+      display: block;
+      right: 15vw;
+      margin-top: 10px;
+    }
+
+    .txt-sub:after {
+        content:'';
+        display:block;
+        clear:both;
+    }
+    
+
+    .wrap-grid {
+      display: grid;
+      width: calc(100vw - 10em);
+      margin-top: 10em;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 12em);
+      gap: 20px;
+      li {
+        background-color: nth($gray, 6);
+        padding: 25px;
+        strong {
+          font-weight: $bold;
+          font-size: $normal;
+          @include flex-content(row, space-between, center);
+        }
+        strong:after{
+          content: '';
+          width: 30px;
+          height: 30px;
+          background-color: nth($gray, 2);
+        }
+        p {
+          margin-top: 10px;
+          font-weight: $light;
+          font-size: $normal;
+          height: 65%;
+          @include flex-content(column, space-between, flex-start);
+        }
+        p:after {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 2px;
+          background-color: black;
+        }
+      }
+    }
+    
+  }
+  #page_two{
+    @include background('bg6.jpg');
+    color: white;
+
+    .txt-sub:before{
+      background-color: white;
+    }
+
+    .wrap-list {
+      margin-top: 10rem;
+      width: calc(100vw - 10em);
+      @include flex-content(row, center, center);
+      text-align: center;
+
+      li {
+        border: 1px solid lightgray;
+        padding: $bigger $small;
+        strong{
+          font-weight: $bold;
+          font-size: $big;
+        }
+        p {
+          line-height: $normal;
+          padding: 10px;
+        }
+      }
+
+      li:before{
+        content: '';
+        width: 60px;
+        height: 60px;
+        background-color: blue;
+        position: relative;
+        display: block;
+        margin: 10px auto;
+      }
+    }
+  }
+  #page_three{
+    @include background('bg4.jpg');
+    .wrap-grid {
+      width: 50em;
+      padding-left: 30vw;
+      grid-template-columns: repeat(2, 1fr);
+      li {
+        background: none;
+      }
+      strong {
+        font-size: $normal;
+      }
+      strong:after {
+        content: '->';
+        background: none;
+      }
+      p:after{
+        height: 0;
+      }
+      p:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+      }
+    }
+  }
+  #page_four {
+    @include background('bg1.jpg');
+    color: white;
+    .tit-sub:after{
+      color: white;
+    }
+    .wrap-grid{
+      strong:after{
+        background: none;
+      }
+
+      li{
+        background: none;
+      }
+
+      p:after{
+        height: 0;
+      }
+      p:before {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: white;
+      }
+    }
   }
 
+  #page_five{
+    @include background('bg2.jpg');
+    color: white;
+    img {
+      width: 100%;
+    }
+  }
 
+  #page_six {
+    @include flex-content(column, flex-start, flex-start);
+    .wrap-grid{
+      position: relative;
+      margin: $normal 0;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      li{
+        background: none;
+        strong:after{
+          background: none;
+          content: "->";
+        }
+        p:after{
+          height: 0;
+        }
+        p:before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: black;
+        }
+      }
+    }
+    .box-ask {
+      position: relative;
+      width: 100%;
+      padding: 2em 0;
+      background-color: red;
+      color: white;
+      z-index: 10;
+      ul{
+        @include flex-content(row, space-around, center);
+        li{
+          @include flex-content(column, flex-start, flex-start);
+          strong {
+            font-size: $normal;
+          }
+          strong:last-child{
+            font-size: $big;
+          }
+          form {
+            @include flex-content(row, center, flex-start);
+            box-sizing: border-box;
+            font-size: $small;
+            fieldset {
+              @include flex-content(column, flex-start, flex-start);
+              input[type="text"] {
+                width: 25em;
+                padding: $normal;
+                margin-bottom: $normal;
+                border-radius: 10px;
+                border: none;
+              }
+            }
+          }
+          button {
+            font-weight: $medium;
+            font-size: $normal;
+            border: 3px solid white;
+            border-radius: 2px;
+            padding: $big;
+            margin-left: $normal;
+          }
+        }
+      }
+    }
+    .map {
+      width: 100%;
+      height: 40vh;
+      position: absolute;
+      background-color: yellow;
+      left:0;bottom: 0;
+      img {
+        position: relative;
+        display: block;
+        margin: 100px auto;
+        width: 50px;
+      }
+    }
+  }
 }
 
 #navigator {
-  @include flex-content(row, space-between);
+  @include flex-content(row, space-between, center);
   position: fixed;
   bottom: 3vh;
   right: 0;
   width: calc(50vw + 78px);
   nav {
-    @include flex-content(row, center);
+    @include flex-content(row, center, center);
     a {
       width: 6px;
       height: 6px;
@@ -100,24 +360,60 @@
   }
 
   ul {
-    @include flex-content(column, center);
+    @include flex-content(column, center, center);
     padding-right: 5%;
     li {
       color: white;
       margin: 5px;
       text-shadow: 1px 1px 1px gray;
       button {
-        @include flex-content(row, center);
+        @include flex-content(row, center, center);
         background-color: red;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         border-radius: 100%;
       }
       img {
         width: 30px;
-        padding: 20px;
       }
     }
+  }
+}
+
+footer {
+  background-color: nth($gray, 1);
+  padding: $big;
+  color: nth($gray, 3);
+  @include flex-content(row, space-around, center);
+  div {
+    @include flex-content(column, flex-start, flex-start);
+
+    ul {
+      @include flex-content(row, flex-start, flex-start);
+      li {
+        padding-right: $normal;
+      }
+    }
+    ul:first-child {
+      color: white;
+      font-weight: $bold;
+      margin-bottom: $normal;
+      li:after{
+        font-size: 0;
+      }
+    }
+    li:after {
+      position: relative;
+      content: '|';
+      font-size: $normal;
+      padding-left: $small; 
+    }    
+    li:last-child:after{
+      font-size: 0;
+    }
+  }
+  img {
+    height: $big;
   }
 }
 
@@ -131,19 +427,24 @@
 }
 
 @include Medium {
-  .main-bg {
+  .main .bg-main {
     background-size: contain;
+    background-position-y: 0;
   }
 }
 
 @include Small {
-  .main-bg {
+  .main .bg-main {
     background-size: contain;
+    background-position-y: 0;
+
   }
 }
 
 @include Min {
-  .main-bg {
+  .main .bg-main {
     background-size: contain;
+    background-position-y: 0;
+
   }
 }
