@@ -90,10 +90,20 @@
       <tr>
         <td>7회차 (01/14)</td>
         <td>
-          <a href="#7">???</a>
+          <a href="#7">HTML/CSS 연습</a>
         </td>
         <td>
           <a href="https://jiseung-kang.github.io/Publishing-Study/einsmedia/index.html">einsmedia 과제</a>
+        </td>
+      </tr>
+       <tr>
+        <td>8회차 (01/16)</td>
+        <td>
+          <a href="#8">HTML/CSS 연습</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0116/index.html">CSS 연습 (1)</a><br>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0116/focus.html">CSS 연습 (2)</a>
         </td>
       </tr>
     </tbody>
@@ -258,13 +268,117 @@
   </div>
 
   <div id='7'>
-    <h2>7회차 : </h2>
+    <h2>7회차 : HTML/CSS</h2>
     - <a href="https://jiseung-kang.github.io/Publishing-Study/einsmedia/index.html">아인스미디어 과제</a> 미리보기
     <img src="./einsmedia/preview.png" alt="einsmedia preview"/>
     <div>
       <h3>Study</h3>
       <ul>
-        <li></li>
+        <li><a href="https://github.com/mmcho122/publising-study/blob/main/clone-study/scss/index.html">최미진님 코드</a></li>
+        <li><a href="https://yooss2006.github.io/publishing-study/einsmedia%20%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9/index.html">유순상님 코드</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id='8'>
+    <h2>8회차 : HTML/CSS</h2>
+    <div>
+      <h3>Study</h3>
+      <ul>
+      <li>
+      https://fonts.googleapis.com/icon?family=Material+Icons<br>
+      <div class="optionWrap">
+        <button type="button" class="option">
+            <span class="material-icons">
+                more_vert
+            </span>
+            <span class="blind">
+                옵션메뉴
+            </span>
+        </button>
+      </div>      
+
+```
+<div class="optionWrap">
+      <button type="button" class="option">
+          <span class="material-icons">
+              more_vert
+          </span>
+          <span class="blind">
+              옵션메뉴
+          </span>
+      </button>
+  </div>
+
+```
+  </li>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/0116/focus.html">연습 1 (box)</a><br>
+        <img src="./0116/preview.png" alt="box preview"/>
+
+```
+.box1 {
+width:200px;height:200px;
+border:10px solid red;
+outline:7px solid olive;
+margin:50px auto;
+padding:5vw;
+box-sizing:border-box;
+}
+.box2 {
+width:200px;height:200px;
+border:10px solid red;
+outline:7px solid olive;
+margin:50px auto;
+padding:5px;
+}
+
+input:focus {
+  outline:2px solid red;
+  box-shadow:0 0 30px rgba(0,0,0,0.2);
+}
+
+```
+  </li>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/0116/index.html">연습 2 (hover)</a><br>
+        <img src="./0116/preview.gif" alt="hover preview"/><br>
+
+```
+.box {
+  background:url('./images/spiderman.jpg') no-repeat center center/cover;
+  width:300px;
+  height:200px;
+  border-radius:10px;
+  margin:100px auto;
+  border:1px solid rgba(0,0,0,0.7);
+  box-sizing:border-box; 
+  position:relative;
+  overflow:hidden;
+}
+.box .link p {
+  background-color:rgba(0,0,0,0.7);
+  color:mediumaquamarine;
+  position:absolute;
+  left:0;bottom:-60px;width:100%;
+  padding:12px;
+  box-sizing:border-box;
+}
+
+.box .optionWrap { 
+  position:absolute;
+  right:7px;
+  top:7px;
+}
+
+.box .option {
+  opacity:0;  
+  border:none; 
+  background-color:transparent;
+  color:#fff;
+  width:36px;height:36px;
+  border-radius:50%;
+} 
+```
+  </li>
       </ul>
     </div>
   </div>

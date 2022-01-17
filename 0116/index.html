@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-1.11.2.js"></script>
+    <script>
+        $(function() {
+            const $btn = $('.btnHam');
+            $btn.on('click',function() {
+                $('.box').fadeToggle();
+            }) 
+        })
+    </script>
+    <style>
+        .box {
+            /* display:none; */
+            background:url('./images/spiderman.jpg') no-repeat center center/cover;
+            width:300px;
+            height:200px;
+            border-radius:10px;
+            margin:100px auto;
+            border:1px solid rgba(0,0,0,0.7);
+            box-sizing:border-box; 
+            position:relative;
+            overflow:hidden;
+        }
+
+        .box:hover  .link {
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .box:hover .link p {
+            bottom: 0;
+        }
+
+        .box:hover .option { 
+            opacity: 1;
+            background-color:rgba(255,255,255,0.2);
+
+        }
+
+        .box .link {
+            display:block;  
+            position:absolute;
+            left:0;top:0;right:0;bottom:0;
+            transition:0.5s;
+        }
+
+        .box .link p {
+            background-color:rgba(0,0,0,0.7);
+            color:mediumaquamarine;
+            position:absolute;
+            left:0;bottom:-60px;width:100%;
+            padding:12px;
+            box-sizing:border-box;
+            transition:0.5s /* all 0.5s ease 0s */
+        }
+
+        .box .optionWrap { 
+            position:absolute;
+            right:7px;
+            top:7px;
+        }
+
+        .box .option {
+            opacity:0;  
+            border:none; 
+            background-color:transparent;
+            color:#fff;
+            width:36px;height:36px;
+            border-radius:50%;
+            transition: 0.5s;
+        } 
+
+        .box .pop {
+            position:absolute;
+            right:40px;
+            top:0;
+            background-color:#fff;
+            border-radius:2px;
+            padding:5px;
+            font-size:11px;
+            width:100px;
+            display:none;
+        }
+
+        .box .pop li:not(:first-child) {
+            margin-top:3px;
+        }
+
+        .box .pop a { 
+            padding:5px 0;
+            display:block;
+            transition:0.4s;
+        }
+
+        .box .pop a:hover {
+            color:red;
+        }
+
+        .btnHam {
+            position:fixed;
+            right:20px;top:20px; 
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:void(0);" class="btnHam">
+        <i class="material-icons">segment</i>
+    </a>
+    <div class="box">
+        <a href="#" class="link">
+            <p>
+                Spiderman is fun~!
+            </p>
+        </a> 
+        <div class="optionWrap">
+            <button type="button" class="option">
+                <span class="material-icons">
+                    more_vert
+                </span>
+                <span class="blind">
+                    옵션메뉴
+                </span>
+            </button>
+            <ul class="pop">
+                <li><a href="#">바로가기 수정</a></li>
+                <li><a href="#">삭제</a></li>
+                <li><a href="#">삭제</a></li>
+            </ul>
+        </div>
+    </div>
+    <script> 
+        const btn = document.querySelector('.option');
+        const pop = document.querySelector('.pop');
+        btn.addEventListener('click',viewOption);
+        
+        function viewOption() {
+            console.log(pop);
+            pop.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

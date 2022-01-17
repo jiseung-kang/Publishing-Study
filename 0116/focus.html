@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width:200px;height:200px;
+            border:10px solid red;
+            outline:7px solid olive;
+            margin:50px auto;
+            padding:5vw;
+            box-sizing:border-box;
+        }
+        .box2 {
+            width:200px;height:200px;
+            border:10px solid red;
+            outline:7px solid olive;
+            margin:50px auto;
+            padding:5px;
+        }
+
+        input:focus {
+            outline:2px solid red;
+            box-shadow:0 0 30px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">BOX 1</div>
+    <div class="box2">BOX 2</div>
+    <input type="text">
+</body>
+</html>
