@@ -106,6 +106,15 @@
           <a href="https://jiseung-kang.github.io/Publishing-Study/0116/focus.html">CSS 연습 (2)</a>
         </td>
       </tr>
+      <tr>
+        <td>9회차 (01/20)</td>
+        <td>
+          <a href="#9">HTML/CSS/SCSS 연습</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html">CSS 연습</a>
+        </td>
+      </tr>
     </tbody>
   </table>
 </nav>
@@ -296,7 +305,7 @@
                 옵션메뉴
             </span>
         </button>
-      </div>      
+      </div>     
 
 ```
 <div class="optionWrap">
@@ -382,6 +391,17 @@ input:focus {
       </ul>
     </div>
   </div>
+
+  <div id='9'>
+  <h2>8회차 : HTML/CSS/SCSS</h2>
+  <div>
+    <h3>Study</h3>
+    <ul>
+      <li>sass --watch --style compressed scss:css</li>
+      <li>언더바(_)로 시작하는 scss파일은 제외된다.</li>
+      <li><a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html"></a>아인스미디어 클론</li>
+    </ul>
+    </div>   
 
   <!-- <div id=''>
     <h2>회차 : </h2>

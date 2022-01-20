@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+
+@mixin line($color:red) {
+    outline:1px solid $color;
+    background-color:lighten($color,30%);
+}
+
+@mixin flex($a:stretch,$wrap:nowrap,$j:space-between) {
+    display:flex;
+    justify-content:$j;
+    align-items:$a;
+    flex-wrap:$wrap;
+}
+
+@mixin bg($img,$size:cover) {
+    background:url($url + $img) no-repeat center center/$size;
+}
+
+// #{변수}
+
+$w : 300px;
+$h : 20%;
+
+.test {
+    @include line;
+    width:calc(#{$w} + #{$h});
+}
+
+@mixin ir($img,$size) {
+
+}
