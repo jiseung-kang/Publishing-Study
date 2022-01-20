@@ -1,34 +1,112 @@
-@charset "utf-8"; 
-@import 'variables','reset', 'mixin';
+@charset "utf-8";
+@import 'variables', 'reset', 'mixin';
 
 .main {
   position: relative;
   display: block;
   color: white;
-  .bg-main{
+
+  .bg-main {
     width: 100%;
     height: 100%;
     position: absolute;
     @include background('bg7.jpg');
   }
+
   header {
     position: absolute;
     width: 90%;
     font-weight: $medium;
     padding: 5vh 5vw;
     @include flex-content(row, space-between, center);
+
     img {
       height: 30px;
     }
-  
-    nav ul {
-      @include flex-content(row, space-between, center);
-      width: 60vw;
+
+    .nav-tab {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      color: black;
+      z-index: 100;
+      padding-top: $big;
+      font-weight: $bold;
+      font-size: $bigger;
+
+      ul {
+        padding-top: $normal;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $small;
+        font-size: $smaller;
+
+        li {
+          @include flex-content(column, flex-start, center);
+
+          ul {
+            @include flex-content(column, center, center);
+          }
+        }
+
+        #btn-menu {
+          position: absolute;
+          right: $small;
+          top: $small;
+        }
+      }
+    }
+
+    .nav-menu {
+      ul {
+        @include flex-content(row, space-between, center);
+        width: 60vw;
+
+        li {
+          @include flex-content(column, flex-start, center);
+
+          button:hover:after {
+            font-size: $big;
+            position: absolute;
+            top: 30%;
+            content: '.';
+            color: red;
+          }
+
+          ul {
+            display: none;
+          }
+
+        }
+
+        li:hover ul {
+          display: block;
+          width: fit-content;
+          position: absolute;
+          top: 5rem;
+          padding: 20px;
+          background-color: red;
+          text-align: center;
+
+          li {
+            padding: 10px;
+          }
+        }
+      }
     }
   }
+
+  #page_one {
+    background-color: white;
+  }
+
   .wrap-main {
     height: 100vh;
     @include flex-content(row, flex-start, center);
+
     .wrap-btn {
       @include flex-content(row, flex-start, center);
       font-weight: 500;
@@ -39,33 +117,37 @@
         padding: 0px 10px;
       }
     }
-    .wrap-para{
+
+    .wrap-para {
       z-index: 10;
     }
+
     h3 {
       font-size: $bigger;
       font-weight: $bold;
     }
+
     p {
       font-size: $normal;
       margin-top: 30px;
       font-weight: $light;
     }
   }
+
   .wrap-icon {
     @include flex-content(row, flex-start, center);
     position: absolute;
     left: 5vh;
     bottom: 5vh;
-    
+
     img {
       margin-right: 30px;
       height: 30px;
     }
-  }  
+  }
 }
 
-#home{
+#home {
   display: block;
   position: relative;
   width: 100vw;
@@ -84,7 +166,8 @@
       float: left;
     }
 
-    .tit-sub:after{
+    .tit-sub:after,
+    .lst-nav::after {
       position: relative;
       content: '.';
       color: red;
@@ -108,11 +191,11 @@
     }
 
     .txt-sub:after {
-        content:'';
-        display:block;
-        clear:both;
+      content: '';
+      display: block;
+      clear: both;
     }
-    
+
 
     .wrap-grid {
       display: grid;
@@ -121,20 +204,24 @@
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 12em);
       gap: 20px;
+
       li {
         background-color: nth($gray, 6);
         padding: 25px;
+
         strong {
           font-weight: $bold;
           font-size: $normal;
           @include flex-content(row, space-between, center);
         }
-        strong:after{
+
+        strong:after {
           content: '';
           width: 30px;
           height: 30px;
           background-color: nth($gray, 2);
         }
+
         p {
           margin-top: 10px;
           font-weight: $light;
@@ -142,6 +229,7 @@
           height: 65%;
           @include flex-content(column, space-between, flex-start);
         }
+
         p:after {
           content: '';
           display: block;
@@ -151,13 +239,22 @@
         }
       }
     }
-    
   }
-  #page_two{
+
+  #page_one {
+    .wrap-grid {
+      li:hover {
+        background-color: white;
+        box-shadow: 10px 5px 5px rgb(224, 224, 224);
+      }
+    }
+  }
+
+  #page_two {
     @include background('bg6.jpg');
     color: white;
 
-    .txt-sub:before{
+    .txt-sub:before {
       background-color: white;
     }
 
@@ -170,17 +267,24 @@
       li {
         border: 1px solid lightgray;
         padding: $bigger $small;
-        strong{
+
+        strong {
           font-weight: $bold;
           font-size: $big;
         }
+
         p {
           line-height: $normal;
           padding: 10px;
         }
       }
 
-      li:before{
+      li:hover {
+        background-color: brown;
+        border: 1px solid brown;
+      }
+
+      li:before {
         content: '';
         width: 60px;
         height: 60px;
@@ -191,25 +295,32 @@
       }
     }
   }
-  #page_three{
+
+  #page_three {
     @include background('bg4.jpg');
+
     .wrap-grid {
       width: 50em;
       padding-left: 30vw;
       grid-template-columns: repeat(2, 1fr);
+
       li {
         background: none;
       }
+
       strong {
         font-size: $normal;
       }
+
       strong:after {
         content: '->';
         background: none;
       }
-      p:after{
+
+      p:after {
         height: 0;
       }
+
       p:before {
         content: '';
         display: block;
@@ -219,24 +330,28 @@
       }
     }
   }
+
   #page_four {
     @include background('bg1.jpg');
     color: white;
-    .tit-sub:after{
+
+    .tit-sub:after {
       color: white;
     }
-    .wrap-grid{
-      strong:after{
+
+    .wrap-grid {
+      strong:after {
         background: none;
       }
 
-      li{
+      li {
         background: none;
       }
 
-      p:after{
+      p:after {
         height: 0;
       }
+
       p:before {
         content: '';
         display: block;
@@ -247,9 +362,10 @@
     }
   }
 
-  #page_five{
+  #page_five {
     @include background('bg2.jpg');
     color: white;
+
     img {
       width: 100%;
     }
@@ -257,20 +373,25 @@
 
   #page_six {
     @include flex-content(column, flex-start, flex-start);
-    .wrap-grid{
+
+    .wrap-grid {
       position: relative;
       margin: $normal 0;
       grid-template-columns: repeat(4, 1fr);
       grid-template-rows: 1fr;
-      li{
+
+      li {
         background: none;
-        strong:after{
+
+        strong:after {
           background: none;
           content: "->";
         }
-        p:after{
+
+        p:after {
           height: 0;
         }
+
         p:before {
           content: '';
           display: block;
@@ -280,6 +401,7 @@
         }
       }
     }
+
     .box-ask {
       position: relative;
       width: 100%;
@@ -287,22 +409,29 @@
       background-color: red;
       color: white;
       z-index: 10;
-      ul{
+
+      ul {
         @include flex-content(row, space-around, center);
-        li{
+
+        li {
           @include flex-content(column, flex-start, flex-start);
+
           strong {
             font-size: $normal;
           }
-          strong:last-child{
+
+          strong:last-child {
             font-size: $big;
           }
+
           form {
             @include flex-content(row, center, flex-start);
             box-sizing: border-box;
             font-size: $small;
+
             fieldset {
               @include flex-content(column, flex-start, flex-start);
+
               input[type="text"] {
                 width: 25em;
                 padding: $normal;
@@ -312,6 +441,7 @@
               }
             }
           }
+
           button {
             font-weight: $medium;
             font-size: $normal;
@@ -323,12 +453,15 @@
         }
       }
     }
+
     .map {
       width: 100%;
       height: 40vh;
       position: absolute;
       background-color: yellow;
-      left:0;bottom: 0;
+      left: 0;
+      bottom: 0;
+
       img {
         position: relative;
         display: block;
@@ -340,13 +473,16 @@
 }
 
 #navigator {
-  @include flex-content(row, space-between, center);
   position: fixed;
+  display: block;
   bottom: 3vh;
   right: 0;
   width: calc(50vw + 78px);
+
   nav {
     @include flex-content(row, center, center);
+    position: fixed;
+    bottom: 0;
     a {
       width: 6px;
       height: 6px;
@@ -354,29 +490,54 @@
       margin: 10px;
       background-color: lightgray;
     }
+
     a:first-child {
       background-color: red;
     }
   }
 
-  ul {
+  >ul {
     @include flex-content(column, center, center);
-    padding-right: 5%;
-    li {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+
+    >li {
       color: white;
-      margin: 5px;
+      margin: 10px;
       text-shadow: 1px 1px 1px gray;
+      overflow: hidden;
+      > ul {
+        background-color: red;
+        border-radius: 100%;
+      }
       button {
+        margin: 2px;
         @include flex-content(row, center, center);
         background-color: red;
         width: 60px;
         height: 60px;
         border-radius: 100%;
       }
+
       img {
         width: 30px;
       }
     }
+    >li li:nth-child(2), >li li:nth-child(3) {
+      display: none;
+    }
+  }
+  >ul:hover {
+    transition: 2s all;
+    >li>ul {
+      border-radius: 40px;
+    }
+    >li li:nth-child(2), >li li:nth-child(3) {
+      display: block;
+    }
+
   }
 }
 
@@ -385,66 +546,125 @@ footer {
   padding: $big;
   color: nth($gray, 3);
   @include flex-content(row, space-around, center);
+  a:hover {
+    text-decoration: underline;
+  }
+
   div {
     @include flex-content(column, flex-start, flex-start);
 
     ul {
       @include flex-content(row, flex-start, flex-start);
+
       li {
         padding-right: $normal;
       }
     }
+
     ul:first-child {
       color: white;
       font-weight: $bold;
       margin-bottom: $normal;
-      li:after{
+
+      li:after {
         font-size: 0;
       }
     }
+
     li:after {
       position: relative;
       content: '|';
       font-size: $normal;
-      padding-left: $small; 
-    }    
-    li:last-child:after{
+      padding-left: $small;
+    }
+
+    li:last-child:after {
       font-size: 0;
     }
   }
+
   img {
     height: $big;
   }
 }
 
 /* media query */
-@include Max {
+@include Max {}
 
-}
+@include Large {}
 
-@include Large {
-
-}
-
-@include Medium {
-  .main .bg-main {
-    background-size: contain;
-    background-position-y: 0;
-  }
-}
+@include Medium {}
 
 @include Small {
-  .main .bg-main {
-    background-size: contain;
-    background-position-y: 0;
+  header {
+    nav {
+      display: none;
+    }
+  }
+  #home article {
+    height: 100%;
+    .tit-sub{
+      display: block;
+      text-align: center;
+      float: none;
 
+    }
+    .txt-sub::before{
+      display: none;
+    }
+    .txt-sub{
+      display: block;
+      right: 0;left:0;
+      text-align: center;
+    }
+  }
+
+  .main {
+    .wrap-main{
+      height: 70vh;
+      .wrap-btn {
+        font-size: 15px;
+      }
+      h3 {
+        font-size: $big;
+      }
+    }
+  }
+  #home #page_one {
+    .wrap-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 12em);
+    }
+  }
+  #home #page_two {
+    @include background('bg6.jpg');
+    padding: auto;
+    .wrap-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  #home #page_three {
+    .wrap-grid{
+      padding-left:0;
+      padding: auto;
+    }
+  }
+  #home #page_six {
+    .wrap-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
 @include Min {
-  .main .bg-main {
-    background-size: contain;
-    background-position-y: 0;
+  header {
+    nav {
+      display: none;
+    }
+  }
 
+  .main {
+    height: 70vh;
   }
 }
