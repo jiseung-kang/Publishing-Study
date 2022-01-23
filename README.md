@@ -115,6 +115,15 @@
           <a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html">CSS 연습</a>
         </td>
       </tr>
+      <tr>
+        <td>10회차 (01/22)</td>
+        <td>
+          <a href="#10">HTML/CSS/SCSS 연습</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html">CSS 연습</a>
+        </td>
+      </tr>
     </tbody>
   </table>
 </nav>
@@ -393,7 +402,7 @@ input:focus {
   </div>
 
   <div id='9'>
-  <h2>8회차 : HTML/CSS/SCSS</h2>
+  <h2>9회차 : HTML/CSS/SCSS</h2>
   <div>
     <h3>Study</h3>
     <ul>
@@ -401,7 +410,55 @@ input:focus {
       <li>언더바(_)로 시작하는 scss파일은 제외된다.</li>
       <li><a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html"></a>아인스미디어 클론</li>
     </ul>
-    </div>   
+    </div>  
+  <div id='10'>
+  <h2>10회차 : HTML/CSS/SCSS</h2>
+  <div>
+    <h3>Study</h3>
+    <ul>
+      <li><a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html"></a>아인스미디어 클론</li>
+      <li>function, mixin 연습
+
+```
+@function unitCheck($x) { 
+
+// 단위체크
+  @if(type-of($x)==number) {
+    @if(unitless($x)) {
+      @return $x+px;
+    }
+  }
+  @return $x;
+}
+```
+
+```
+@mixin ir($path:null, $p:center center, $s:contain) {
+  background:url($url + '#{$path}') no-repeat #{$p}/#{$s};
+
+  &>span {
+    @include blind; 
+  }
+}
+```
+
+```
+@mixin iconBg($path, $start, $end) {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+
+  @for $i from $start through $end {
+    &:nth-child(#{$i}) {
+    background-image:url($url + '#{$path}#{$i}.png');
+    }
+  }
+}
+```
+
+  </li>
+  </ul>
+  </div>   
 
   <!-- <div id=''>
     <h2>회차 : </h2>

@@ -6,9 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Einsmedia</title>
     <link rel="stylesheet" href="./css/common.css">
+    <script src="./lib/jquery-1.11.2.js"></script>
+    <script>
+        $(function() {
+            const $btnHam = $('.btnHam');
+            const $dimm = $('.dimm');
+            const $modal = $('.modal');
+            const $modal2 = $('.modal2');
+            const $header = $('.pageHeader');
+            const $btnClose = $('.btnClose');
+
+            $btnHam.click(function() {   
+                // $dimm.fadeIn(100);
+                // $modal.fadeIn(100);
+                // $modal2.animate({
+                //     bottom : 0
+                // }, 500);
+                $header.addClass('full');
+                $btnClose.show();
+            })
+
+            $btnClose.click(function() {
+                $header.removeClass('full');
+                $(this).hide();
+            })
+
+            $dimm.click(function() {
+                $(this).hide();
+                // $modal.hide();
+                $modal2.animate({
+                    bottom: '-70vh'
+                }, 100);
+            })
+        }) 
+    </script>
 </head>
-<body>
-    <div class="test">TEST</div>
+<body>  
     <header class="pageHeader">
         <h1>
             <a href="/">
@@ -33,6 +66,8 @@
                 <span><b></b></span>
                 <span><b></b></span>
             </button>
+
+            <button type="button" class="btnClose">X</button>
         </nav> 
     </header>
     <section class="area visual">
@@ -100,6 +135,24 @@
                 CONTENTS
             </div>
         </div>
-    </section>
+    </section> 
+
+    <div class="dimm"></div>
+    <div class="modal">
+        <section class="inner">
+            <header>
+                <h2>알립니다.</h2>
+                <p>설명글</p>
+            </header>
+            <div class="contents">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatibus unde optio, et placeat corrupti id maiores excepturi cumque ducimus omnis, quidem veniam. Id esse sint consequuntur dolorem facilis harum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatibus unde optio, et placeat corrupti id maiores excepturi cumque ducimus omnis, quidem veniam. Id esse sint consequuntur dolorem facilis harum!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptatibus unde optio, et placeat corrupti id maiores excepturi cumque ducimus omnis, quidem veniam. Id esse sint consequuntur dolorem facilis harum!</p>
+            </div> 
+        </section>
+    </div>
+    <div class="modal2">
+        MODAL2
+    </div>
 </body>
 </html>
