@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+
+.dimm {
+    position:fixed;
+    left:0;top:0;
+    width:100vw;
+    height:100vh;
+    background-color:rgba(#000,0.7);
+    z-index:100;
+    display:none;
+}
+ 
+.modal { 
+    z-index:101;
+    @include border(20);  
+    @include modal(50%,400,#fff); 
+    display:none; 
+}
+
+.modal2 {
+    z-index:101;
+    @include modal(100vw,60vh,#fff);
+    bottom:-70vh;
+    top:auto;
+    left:0;
+    transform:translate(0,0);
+}

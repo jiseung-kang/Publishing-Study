@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+KR:wght@100;300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp');
+
+// variables
+
+$url : '../images/';
+$main : #e60012;
+$gray : #333, #666, #999, #d8d8d8, #f6f6f6;
+
+
+@import 'reset','mixin';
+
+body {
+    font-family:'Montserrat','Noto Sans KR', sans-serif;
+    font-size:15px;
+    letter-spacing:-0.5px;
+} 
+
+%base {
+    width:100%;
+    max-width:1350px;
+    padding:0 25px;
+    margin:0 auto; 
+} 
+
+%areaHeader {
+    display:flex;
+    margin-bottom:3em;
+    letter-spacing:-0.7px;
+
+    h2 {
+        font-size:39px;
+        font-weight:600;
+        flex-basis:50%; 
+        line-height:1.2; // 39 x 1.2 = 46.8
+
+        &:after {
+            content:'';
+            display:inline-block;
+            width:7px;height:7px;
+            border-radius:50%;
+            background-color:$main; 
+        }
+    }
+
+    p {
+        font-size:17px; 
+        font-weight:600;
+        position:relative; 
+        padding-left:100px;
+        &:before {
+            content:'';
+            position:absolute;
+            left:0;
+            top:10px;
+            height:3px;
+            background-color:#222;
+            width:70px;
+        }
+    }
+}
+
+
+
+@import 'header','home';
+
+@import 'jungbae','jiseung','hyosun','sichan';
+@import 'sewon','huijung','hyuk','sunsang','mijin';
+
+@import 'modal','footer';
+
+
+
+@media all and (max-width:1350px) {
+    %base {
+        width:auto;  
+    }  
+}
+
+@media all and (max-width:970px) {
+    .area.solution {
+        .cont {
+            max-width:700px;
+            margin:0 auto;
+            @include line;
+
+            .list li {
+                width:calc(50% - 15px);
+            }
+        }
+    }
+    .pageHeader {
+        .list {
+            display:none;
+        }
+
+        &.sticky {
+            padding:0 20px;
+        }
+    }
+    
+    %areaHeader {
+        display:block;
+        text-align:center;
+
+        p {
+            padding-left:0;
+            &:before {
+                display:none;
+            }
+        }
+    }
+}

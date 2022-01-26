@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+// 세원님 소스
+.marketing {
+    .cont {
+      ul {
+        @include flex;
+        padding: auto 20px;
+        .ad-item {
+          width: 25%;
+          // @include line;
+        }
+        a {
+          padding: 33px 25px 0;
+          display: inline-block;
+          text-align: center;
+          .material-icons-outlined {
+            text-align: center;
+            display: inline;
+            margin: 0 auto;
+            font-size: 60px;
+          }
+          h3 {
+            font-size: 21px;
+            font-weight: 700;
+            margin: 18px 18px;
+          }
+          p {
+            font-size: 15px;
+            line-height: 25px;
+            letter-spacing: -0.028em;
+          }
+        }
+      }
+    }
+  }

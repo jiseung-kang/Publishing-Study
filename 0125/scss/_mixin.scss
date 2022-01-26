@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+@mixin line($color:red) {
+    outline:1px solid $color;
+    background-color:lighten($color,30%);
+}
+
+@mixin flex($a:stretch,$wrap:nowrap,$j:space-between) {
+    display:flex;
+    justify-content:$j;
+    align-items:$a;
+    flex-wrap:$wrap;
+}
+
+@mixin bg($img,$size:cover) {
+    background:url($url + $img) no-repeat center center/$size;
+}
+
+
+@function unitCheck($x) {  
+    // 단위체크
+    @if(type-of($x)==number) {
+        @if(unitless($x)) {
+            @return $x+px;
+        } 
+    } 
+    @return $x;
+}
+
+@mixin radius($r) { 
+    $r:unitCheck($r);
+    -ms-border-radius:$r;
+    -webkit-border-radius:$r;
+    border-radius: $r; 
+}
+
+
+@mixin modal($w, $h, $bg) {
+    $w: unitCheck($w);
+    $h: unitCheck($h); 
+    width: $w;
+    height: $h;
+    background-color: $bg;
+    position: fixed;
+    left: 50%; top: 50%; 
+    transform:translate(-50%, -50%);
+    box-shadow:0 0 10px rgba(#000,0.8);
+}
+
+// #{변수}
+
+$w : 300px;
+$h : 20%;
+
+.test {
+    @include line;
+    width:calc(#{$w} + #{$h});
+}
+
+@mixin ir($img,$size) {
+
+}

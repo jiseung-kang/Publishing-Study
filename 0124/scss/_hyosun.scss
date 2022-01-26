@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+// 효순님 소스
+.area.solution {
+	a:hover {
+		box-shadow: 0 2px 20px rgba(black, 0.3);
+		background-color: white;
+		transition: 0.3s;
+	}
+
+	.list {
+		div {
+			@include flex;
+			margin-bottom: 12px;
+
+			h3 {
+				font-size: 22px;
+				font-weight: 700;
+			}
+
+			span {
+				font-size: 40px;
+			}
+		}
+
+		p {
+			font-size: 14px;
+			line-height: 1.8em;
+			letter-spacing: -0.5px;
+
+			&::after {
+				content: "";
+				display: block;
+				width: 43px;
+				left: 0;
+				top: 0;
+				border: 1px solid black;
+				margin-top: 20px;
+			}
+		}
+	}
+}

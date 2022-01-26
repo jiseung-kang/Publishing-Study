@@ -112,7 +112,7 @@
           <a href="#9">HTML/CSS/SCSS 연습</a>
         </td>
         <td>
-          <a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html">CSS 연습</a>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html">SCSS 연습</a>
         </td>
       </tr>
       <tr>
@@ -121,7 +121,25 @@
           <a href="#10">HTML/CSS/SCSS 연습</a>
         </td>
         <td>
-          <a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html">CSS 연습</a>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0120_einsmedia/index.html">SCSS 연습</a>
+        </td>
+      </tr>
+      <tr>
+        <td>11회차 (01/24)</td>
+        <td>
+          <a href="#11">HTML/CSS/SCSS 연습</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0124/index.html">SCSS 연습</a>
+        </td>
+      </tr>
+      <tr>
+        <td>12회차 (01/25)</td>
+        <td>
+          <a href="#12">HTML/CSS/SCSS/media query</a>
+        </td>
+        <td>
+          <a href="https://jiseung-kang.github.io/Publishing-Study/0124/index.html">SCSS 연습</a>
         </td>
       </tr>
     </tbody>
@@ -314,7 +332,7 @@
                 옵션메뉴
             </span>
         </button>
-      </div>     
+      </div>
 
 ```
 <div class="optionWrap">
@@ -329,6 +347,7 @@
   </div>
 
 ```
+
   </li>
         <li><a href="https://jiseung-kang.github.io/Publishing-Study/0116/focus.html">연습 1 (box)</a><br>
         <img src="./0116/preview.png" alt="box preview"/>
@@ -356,6 +375,7 @@ input:focus {
 }
 
 ```
+
   </li>
         <li><a href="https://jiseung-kang.github.io/Publishing-Study/0116/index.html">연습 2 (hover)</a><br>
         <img src="./0116/preview.gif" alt="hover preview"/><br>
@@ -368,7 +388,7 @@ input:focus {
   border-radius:10px;
   margin:100px auto;
   border:1px solid rgba(0,0,0,0.7);
-  box-sizing:border-box; 
+  box-sizing:border-box;
   position:relative;
   overflow:hidden;
 }
@@ -381,21 +401,22 @@ input:focus {
   box-sizing:border-box;
 }
 
-.box .optionWrap { 
+.box .optionWrap {
   position:absolute;
   right:7px;
   top:7px;
 }
 
 .box .option {
-  opacity:0;  
-  border:none; 
+  opacity:0;
+  border:none;
   background-color:transparent;
   color:#fff;
   width:36px;height:36px;
   border-radius:50%;
-} 
+}
 ```
+
   </li>
       </ul>
     </div>
@@ -420,7 +441,7 @@ input:focus {
       <li>function, mixin 연습
 
 ```
-@function unitCheck($x) { 
+@function unitCheck($x) {
 
 // 단위체크
   @if(type-of($x)==number) {
@@ -437,7 +458,7 @@ input:focus {
   background:url($url + '#{$path}') no-repeat #{$p}/#{$s};
 
   &>span {
-    @include blind; 
+    @include blind;
   }
 }
 ```
@@ -458,19 +479,27 @@ input:focus {
 
   </li>
   </ul>
-  </div>   
+  </div>
 
-  <!-- <div id=''>
-    <h2>회차 : </h2>
-    <div>
-      <h3>Project Feedback</h3>
-      <ul>
-      </ul>
-    </div>
+  <div id='11'>
+    <h2>11회차 : HTML/CSS/SCSS</h2>
     <div>
       <h3>Study</h3>
       <ul>
+        <li><a href="https://jiseung-kang.github.io/Publishing-Study/0124/index.html">아인스미디어</a></li>
       </ul>
     </div>
-  </div> -->
+  </div>
+
+  <div id='12'>
+    <h2>12회차 : HTML/CSS/SCSS/media query</h2>
+    <div>
+      <h3>Study</h3>
+      <ul>
+       <li><a href="https://jiseung-kang.github.io/Publishing-Study/0125/index.html">아인스미디어</a></li>
+       <li>sass media query</li>
+       <li>jQuery Full page</li>
+      </ul>
+    </div>
+  </div>
 </div>

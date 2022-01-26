@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+// 미진님 소스
+.ad-item {
+    position: relative;
+    display: block;
+    border: 1px solid #6a6865;
+    transition: all 0.5s;
+  
+    p {
+      opacity: 0.5;
+    }
+  
+    &:hover {
+      background-color: #e60012;
+  
+      &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 40px;
+        left: 40%; bottom: 10%;
+        margin-top: 20px;
+        border: 1px solid #fff;
+      }
+  
+      p {
+        opacity: 1;
+      }
+    }
+
+    .arrow {
+        display: inline-block;
+        padding: 30px;
+    }
+  }

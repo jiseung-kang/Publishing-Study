@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+// 희정님 소스
+.area.f {
+    @include bg('bg_msec05.jpg'); 
+    color: #fff;
+
+    header {
+      @extend %areaHeader;
+      h2 {
+        width: auto;
+      }
+    }
+
+
+    figure {
+      text-align:center;
+      img {
+        // max-height:440px;
+        width:100%;
+        transform:translateX(500px);
+        opacity:0;
+        transition:0.5s; 
+
+        &.show {
+          transform:translateX(0);
+          opacity:1;
+        }
+      }
+
+      figcaption {
+        max-width: 800px;
+        font-size: 18px; 
+        margin: 40px auto 0; // 상 좌우 하
+        padding: 12px 70px;
+        background: rgba(255,255,255,.1);
+        @include radius(35);   
+      }
+    }
+
+   
+
+    strong {
+      font-weight: bold;
+    }
+}

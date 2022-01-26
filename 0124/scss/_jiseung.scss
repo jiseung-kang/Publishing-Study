@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+// 지승님 소스
+.area.g {
+	display: block;
+	position: relative;
+	.inner {
+		padding: 100px 20px 0px;
+	}
+	header {
+		margin-bottom: 50px;
+		h2 {
+			font-weight: 700;
+			font-size: 39px;
+		}
+		h2:after {
+			content: ".";
+			color: red;
+		}
+	}
+
+	.cont {
+		ul {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			li {
+				margin: 20px;
+				a {
+					@include flex(center);
+					font-weight: 700;
+					font-size: 26px;
+					padding: 20px 5px;
+					border-bottom: 3px solid grey;
+					transition: 0.3s;
+					span {
+						width: 50px;
+						height: 3px;
+						background-color: black;
+						transform: translateX(-20px);
+						transition: 0.3s;
+					}
+				}
+				p {
+					font-weight: 400;
+					font-size: 16px;
+					margin: 20px 5px;
+				}
+			}
+			li:hover {
+				a {
+					border-bottom: 3px solid black;
+					span {
+						transform: translateX(0px);
+					}
+				}
+			}
+		}
+	}
+}

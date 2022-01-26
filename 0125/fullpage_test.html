@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html> 
+<head>
+	 
+	<title>Apple iPhone demo (animations) - fullPage.js</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./lib/jquery.fullPage.css" />  
+	<style>
+		* { margin:0; padding:0;} 
+		.pageFooter {
+			padding:50px 0;
+			color:#fff;
+			text-align:center;
+			font-weight:700;
+			background-color:lightslategray;
+		}  
+	</style>
+
+	<script src="./lib/jquery-1.11.2.js"></script>
+	<script src="./lib/jquery-ui.min.js"></script> 
+	<script  src="./lib/jquery.fullPage.js"></script> 
+
+	<script>
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				'verticalCentered': false,
+				'css3': true,
+				'sectionsColor': ['mediumaquamarine','coral','olivedrab','gold'],
+				'navigation': true,
+				'navigationPosition': 'right',
+				'navigationTooltips': ['Slide 1', 'Slide 2', 'Slide 3', 'Slide 4'],
+
+				// 'afterLoad': function(anchorLink, index){
+				// 	if(index == 2){
+				// 		$('#iphone3, #iphone2, #iphone4').addClass('active');
+				// 	}
+				// },
+			 
+
+				'onLeave': function(index, nextIndex, direction){
+					if (index == 3 && direction == 'down'){
+						console.log('DOWN')
+					}
+					else if(index == 3 && direction == 'up'){
+						console.log('UP')
+					}
+				}
+
+				// 	$('#staticImg').toggleClass('active', (index == 2 && direction == 'down' ) || (index == 4 && direction == 'up'));
+				// 	$('#staticImg').toggleClass('moveDown', nextIndex == 4);
+				// 	$('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
+				// }
+			});
+		});
+	</script>
+
+</head>
+<body> 
+<div id="fullpage">
+	<div class="section">
+		<h2>SECTION 1</h2>
+	</div>
+	<div class="section">
+		<h2>SECTION 2</h2>
+	</div>
+	<div class="section">
+		<h2>SECTION 3</h2>
+	</div>
+	<div class="section">
+		<h2>SECTION 4</h2>
+	</div>
+	<footer class="pageFooter section fp-auto-height">
+		FOOTER
+	</footer>
+</div>
+ 
+
+</body>
+</html>

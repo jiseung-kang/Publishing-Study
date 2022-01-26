@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+// 정배님 소스
+.pageFooter {
+    font-family: "Noto Sans KR", "Montserrat", sans-serif;
+    background-color: #222;
+    @include flex($j: center);
+    .inner {
+      @extend %base;
+      @include bg($img: "ft_logo.png", $size: 190px);
+      background-position: 98% center;
+      padding: 34px 20px 30px;
+      font-size: 14px;
+      ul {
+        @include flex($j: start);
+        margin-bottom: 22px;
+  
+        li {
+          margin-right: 40px;
+        }
+  
+        a {
+          color: #ccc;
+          font-weight: 700;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+  
+      dl {
+        @include flex($j: start);
+  
+        color: #888;
+        margin-bottom: 10px;
+  
+        dt {
+          position: relative;
+          margin-right: 12px;
+  
+          &::after {
+            content: ":";
+            position: absolute;
+            right: -7px;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+  
+        dd {
+          margin-right: 26px;
+          position: relative;
+  
+          &::after {
+            content: "";
+            width: 1px;
+            height: 14px;
+            background-color: #888;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -13px;
+          }
+  
+          &:last-child::after {
+            display: none;
+          }
+        }
+      }
+    }
+    p {
+      color: #888;
+    }
+  }

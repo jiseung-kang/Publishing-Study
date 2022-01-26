@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+// 시찬님 소스
+.area.e {
+  @include bg($img: "bg_msec04.jpg");
+  .inner {
+    header {
+      width: 100%;
+      h2 {
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
+        letter-spacing: -0.7;
+      }
+    } 
+    .cont {
+      margin-top: 2em;
+      ul {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: 30%;
+          padding: 25px 15px;
+          h3 {
+            color: #fff;
+            font-size: 23px;
+            font-weight: 600;
+            position: relative;
+            &:after {
+              position: absolute;
+              bottom: -25px;
+              left: 0;
+              content: "";
+              background-color: #fff;
+              height: 2px;
+              width: 52px;
+            }
+          }
+          p {
+            margin-top: 50px;
+            color: #fff;
+            font-weight: 400;
+            font-size: 15.5px;
+          }
+        }
+      }
+    }
+  }
+}

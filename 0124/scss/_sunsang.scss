@@ -1,0 +1,65 @@
+// 순상님 소스
+
+@keyframes bar {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+.area.d {
+	.list {
+		@include flex($wrap: wrap, $j: flex-start);
+		margin: 0 0 0 auto;
+		width: 60%;
+		dl {
+			width: calc((100% - 64px) / 2);
+			&:nth-child(2n) {
+				margin-left: 64px;
+			}
+			&:nth-child(1),
+			&:nth-child(2) {
+				margin-bottom: 50px;
+			}
+			dt {
+				display: block;
+				font-size: 26px;
+				font-weight: 900;
+				margin-bottom: 20px;
+
+				a {
+					display: block;
+					position: relative;
+					overflow: hidden;
+					&::after {
+						display: block;
+						content: "";
+						height: 4px;
+						margin-top: 20px;
+						background-color: black;
+					}
+					&::before {
+						content: "";
+						position: absolute;
+						width: 20px;
+						height: 3px;
+						right: 10px;
+						top: 50%;
+						transform: translateY(-50%);
+						background-color: black;
+					}
+					&:hover > 🥲 {
+						background-color: red;
+					}
+				}
+			}
+			dd {
+				font-size: 15.5px;
+				max-width: 80%;
+				line-height: 1.5;
+			}
+		}
+	}
+}
